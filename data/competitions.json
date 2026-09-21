@@ -71,7 +71,7 @@
       "note": "enabled=false 表示展示全部竞赛；有官网动态的赛事会在卡片上显示「最新动态」区块。maxNotices 控制每个赛事显示几条。"
     },
     "lastCrawl": {
-      "ranAt": "2026-09-21T11:59:40.473Z",
+      "ranAt": "2026-09-21T12:06:18.531Z",
       "checked": 37,
       "verified": 29,
       "total": 37,
@@ -84,7 +84,7 @@
       "note": "由 scripts/crawl-competitions.mjs 自动生成；officialUrlVerified 表示官网在当前网络环境下可达"
     },
     "lastDetailCrawl": {
-      "ranAt": "2026-09-21T11:59:55.411Z",
+      "ranAt": "2026-09-21T12:06:33.309Z",
       "sites": [
         {
           "id": "cnsoftbei",
