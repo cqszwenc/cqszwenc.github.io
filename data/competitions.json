@@ -71,12 +71,12 @@
       "note": "enabled=false 表示展示全部竞赛；有官网动态的赛事会在卡片上显示「最新动态」区块。maxNotices 控制每个赛事显示几条。"
     },
     "lastCrawl": {
-      "ranAt": "2026-09-20T15:28:21.042Z",
-      "checked": 33,
-      "verified": 25,
-      "total": 33,
+      "ranAt": "2026-09-21T11:59:40.473Z",
+      "checked": 37,
+      "verified": 29,
+      "total": 37,
       "summary": {
-        "ok": 23,
+        "ok": 27,
         "dnsfail": 6,
         "certissue": 2,
         "timeout": 2
@@ -84,7 +84,7 @@
       "note": "由 scripts/crawl-competitions.mjs 自动生成；officialUrlVerified 表示官网在当前网络环境下可达"
     },
     "lastDetailCrawl": {
-      "ranAt": "2026-09-21T11:09:05.297Z",
+      "ranAt": "2026-09-21T11:59:55.411Z",
       "sites": [
         {
           "id": "cnsoftbei",
@@ -200,7 +200,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok",
       "notices": [
         {
@@ -327,7 +327,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok",
       "redirectedTo": "https://www.heywhale.com/home"
     },
@@ -368,7 +368,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "dnsfail"
     },
     {
@@ -407,7 +407,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "certissue"
     },
     {
@@ -447,7 +447,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok",
       "redirectedTo": "http://r.huaweistatic.com/s/hwtalent/lst/ict-academy/"
     },
@@ -488,7 +488,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -528,7 +528,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok",
       "notices": [
         {
@@ -646,7 +646,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -686,7 +686,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -726,7 +726,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok",
       "notices": [
         {
@@ -879,7 +879,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -919,7 +919,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -959,7 +959,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -999,7 +999,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "certissue"
     },
     {
@@ -1039,7 +1039,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "dnsfail"
     },
     {
@@ -1079,7 +1079,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "dnsfail"
     },
     {
@@ -1119,7 +1119,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -1159,7 +1159,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -1199,7 +1199,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok",
       "redirectedTo": "https://job.zte.com.cn/cn/"
     },
@@ -1240,7 +1240,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok",
       "notices": [
         {
@@ -1308,7 +1308,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -1386,7 +1386,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "dnsfail"
     },
     {
@@ -1464,7 +1464,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -1504,7 +1504,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "dnsfail"
     },
     {
@@ -1544,7 +1544,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -1584,7 +1584,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "dnsfail"
     },
     {
@@ -1624,7 +1624,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -1664,7 +1664,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -1704,7 +1704,7 @@
       "sources": [
         "craii-2026"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok",
       "notices": [
         {
@@ -1826,7 +1826,7 @@
       "sources": [
         "cahe-ranking"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok",
       "notices": [
         {
@@ -1952,7 +1952,7 @@
       "sources": [
         "cahe-ranking"
       ],
-      "lastChecked": "2026-09-20",
+      "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok"
     },
     {
@@ -2086,7 +2086,9 @@
       "keyDatesFrom": {
         "title": "韬涵万象，挥斥方遒 ——2022“外研社·国才杯”全国英语写作、阅读大赛全国决赛成功举办 2022/12/10",
         "url": "https://uchallenge.unipus.cn/c/2022-12-10/515792.shtml"
-      }
+      },
+      "lastChecked": "2026-09-21",
+      "lastCheckStatus": "ok"
     },
     {
       "id": "apmcm",
@@ -2221,7 +2223,9 @@
       "keyDatesFrom": {
         "title": "【报名通知中文版】2025年第十五届APMCM亚太地区大学生数学建模竞赛",
         "url": "https://www.apmcm.org/detail/2493"
-      }
+      },
+      "lastChecked": "2026-09-21",
+      "lastCheckStatus": "ok"
     },
     {
       "id": "mcm",
@@ -2336,7 +2340,9 @@
         }
       ],
       "noticesSource": "https://www.mcm.edu.cn/",
-      "noticesFetchedAt": "2026-09-21"
+      "noticesFetchedAt": "2026-09-21",
+      "lastChecked": "2026-09-21",
+      "lastCheckStatus": "ok"
     },
     {
       "id": "robomaster",
@@ -2461,7 +2467,9 @@
         }
       ],
       "noticesSource": "https://www.robomaster.com/zh-CN/resource/announcement",
-      "noticesFetchedAt": "2026-09-21"
+      "noticesFetchedAt": "2026-09-21",
+      "lastChecked": "2026-09-21",
+      "lastCheckStatus": "ok"
     }
   ]
 }
