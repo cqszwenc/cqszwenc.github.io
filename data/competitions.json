@@ -1,0 +1,2467 @@
+{
+  "meta": {
+    "schemaVersion": "1.0.0",
+    "generatedAt": "2026-09-21",
+    "generatedBy": "dsh-orchestrator",
+    "description": "竞赛聚合器白名单样例数据：用于抓取筛选与前端展示。价值等级以《普通高校大学生计算机类竞赛指数（本科，2026版）》星级为准；中国高等教育学会《全国普通高校大学生竞赛榜单》作为补充来源。",
+    "sources": [
+      {
+        "id": "craii-2026",
+        "name": "普通高校大学生计算机类竞赛指数（本科，2026版）",
+        "publisher": "全国高等学校计算机教育研究会、教师教学发展研究国家级虚拟教研室、浙大城市学院高等教育数智评价研究中心",
+        "publishedAt": "2026-03-30",
+        "url": "https://www.ceracu.org.cn/nd.jsp?id=288&groupId=20",
+        "coverage": "31 项竞赛；数据采集区间 2012-01-01 至 2025-12-31，共 282155 条",
+        "tiering": "区分为五星（3项）/ 四星（6项）/ 三星（10项）/ 两星（11项），另 ICPC 为国际赛不定星级"
+      },
+      {
+        "id": "cahe-ranking",
+        "name": "全国普通高校大学生竞赛榜单（竞赛分析报告）",
+        "publisher": "中国高等教育学会",
+        "url": "https://www.cahe.edu.cn/",
+        "coverage": "全国普通高校大学生竞赛目录（本科）",
+        "note": "本样例中标记 verified 字段表示该 URL 已实测返回 HTTP 200"
+      },
+      {
+        "id": "cross-domain",
+        "name": "跨领域竞赛补充",
+        "publisher": "本项目自行整理",
+        "url": "https://www.moe.gov.cn/",
+        "coverage": "英语、数学、机器人等非计算机类学科竞赛",
+        "note": "这些赛事不在《普通高校大学生计算机类竞赛指数（2026版）》覆盖的 31 项之内，作为跨领域补充收录，其价值等级统一标记为“跨领域补充”，不代表官方星级。"
+      }
+    ],
+    "tierScale": [
+      {
+        "value": "five-star",
+        "label": "五星",
+        "weight": 5,
+        "note": "必须为非收费赛事"
+      },
+      {
+        "value": "four-star",
+        "label": "四星",
+        "weight": 4
+      },
+      {
+        "value": "three-star",
+        "label": "三星",
+        "weight": 3
+      },
+      {
+        "value": "two-star",
+        "label": "两星",
+        "weight": 2
+      },
+      {
+        "value": "international",
+        "label": "国际赛（不定星级）",
+        "weight": 5
+      }
+    ],
+    "fieldNotes": {
+      "officialUrlVerified": "true = 已实测可访问；false = 域名为公知但本地未实测通过（TLS/超时），抓取任务需二次校验",
+      "contentKnowledgePrep": "展示用摘要，非官方赛程原文，抓取任务应回填官方最新信息"
+    },
+    "preview": {
+      "enabled": false,
+      "title": "全部竞赛 + 最新动态",
+      "maxNotices": 3,
+      "noticeTags": [],
+      "note": "enabled=false 表示展示全部竞赛；有官网动态的赛事会在卡片上显示「最新动态」区块。maxNotices 控制每个赛事显示几条。"
+    },
+    "lastCrawl": {
+      "ranAt": "2026-09-20T15:28:21.042Z",
+      "checked": 33,
+      "verified": 25,
+      "total": 33,
+      "summary": {
+        "ok": 23,
+        "dnsfail": 6,
+        "certissue": 2,
+        "timeout": 2
+      },
+      "note": "由 scripts/crawl-competitions.mjs 自动生成；officialUrlVerified 表示官网在当前网络环境下可达"
+    },
+    "lastDetailCrawl": {
+      "ranAt": "2026-09-21T11:09:05.297Z",
+      "sites": [
+        {
+          "id": "cnsoftbei",
+          "ok": true,
+          "entries": 8,
+          "withDates": 0,
+          "error": null
+        },
+        {
+          "id": "ccsp",
+          "ok": true,
+          "entries": 8,
+          "withDates": 6,
+          "error": null
+        },
+        {
+          "id": "fwwb",
+          "ok": true,
+          "entries": 8,
+          "withDates": 0,
+          "error": null
+        },
+        {
+          "id": "tipdm",
+          "ok": true,
+          "entries": 3,
+          "withDates": 0,
+          "error": null
+        },
+        {
+          "id": "challenge-cup",
+          "ok": true,
+          "entries": 8,
+          "withDates": 1,
+          "error": null
+        },
+        {
+          "id": "icpc",
+          "ok": true,
+          "entries": 8,
+          "withDates": 0,
+          "error": null
+        },
+        {
+          "id": "apmcm",
+          "ok": true,
+          "entries": 8,
+          "withDates": 1,
+          "error": null
+        },
+        {
+          "id": "mcm",
+          "ok": true,
+          "entries": 8,
+          "withDates": 0,
+          "error": null
+        },
+        {
+          "id": "robomaster",
+          "ok": true,
+          "entries": 8,
+          "withDates": 0,
+          "error": null
+        },
+        {
+          "id": "fltrp",
+          "ok": true,
+          "entries": 8,
+          "withDates": 1,
+          "error": null
+        }
+      ],
+      "totalEntries": 75,
+      "totalWithDates": 9,
+      "note": "仅覆盖服务端渲染的重点赛事站点；其余站点为 JS 空壳，静态抓取无法获取内容"
+    }
+  },
+  "competitions": [
+    {
+      "id": "cnsoftbei",
+      "name": "“中国软件杯”大学生软件设计大赛",
+      "shortName": "中国软件杯",
+      "organizer": "工业和信息化部、教育部、江苏省人民政府",
+      "officialUrl": "https://www.cnsoftbei.com/",
+      "officialUrlVerified": true,
+      "tier": "five-star",
+      "tierLabel": "五星",
+      "categories": [
+        "软件开发",
+        "学科竞赛排行榜",
+        "公益免费"
+      ],
+      "tags": [
+        "A类",
+        "企业命题",
+        "软件工程"
+      ],
+      "targetAudience": "本科、高职高专在校学生",
+      "content": "由企业出真实命题、学生组队完成软件作品，赛题方向覆盖人工智能、大数据、工业软件、嵌入式等，分初赛（作品评审）与决赛（现场答辩与演示）。",
+      "knowledge": [
+        "至少一门主力语言（Java / Python / C++ / JS）",
+        "软件工程与需求分析",
+        "数据库与后端接口开发",
+        "前端或移动端界面实现",
+        "Git 协作与文档写作"
+      ],
+      "preparation": [
+        "提前 2-3 个月组队（3-4 人，明确前后端分工）",
+        "研读往年赛题与企业技术栈，锁定 1 个方向",
+        "准备可演示的原型 + 技术文档与 PPT",
+        "答辩练习：3 分钟讲清创新点与完成度"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok",
+      "notices": [
+        {
+          "title": "第十五届“中国软件杯”大赛报名和作品提交截止时间的通知",
+          "url": "https://www.cnsoftbei.com/content-1-1349-1.html",
+          "date": "2026-06-18",
+          "excerpt": "一、报名截止时间延长 为保证各参赛团队能正常完成第十五届中国软件杯大学生软件设计大赛在线报名，报名系统将延迟至 2026年7",
+          "tags": [
+            "报名",
+            "赛程"
+          ],
+          "sourcePage": "https://www.cnsoftbei.com/list-1-1.html"
+        },
+        {
+          "title": "第十五届“中国软件杯”大赛报名方式说明",
+          "url": "https://www.cnsoftbei.com/content-1-1287-1.html",
+          "date": "2026-04-03",
+          "excerpt": "已报名的团队，建议进官方qq群，方便交流&接收通知。 学生群：470636964、179326524、209318323、215410234（参赛学生任意选择一个申请进",
+          "tags": [
+            "报名",
+            "规则"
+          ],
+          "sourcePage": "https://www.cnsoftbei.com/list-1-1.html"
+        },
+        {
+          "title": "第十五届“中国软件杯”大赛全国总决赛第一轮评审流程说明",
+          "url": "https://www.cnsoftbei.com/content-1-1358-1.html",
+          "date": "2026-08-18",
+          "excerpt": "一、设备测试： 1、时间：2026年8月21日(周五)13:30-19:302、方式：所有赛题分为六组，每组分别组建决赛QQ群，群二维码将会发送至各晋级",
+          "tags": [
+            "赛程",
+            "规则"
+          ],
+          "sourcePage": "https://www.cnsoftbei.com/list-1-1.html"
+        },
+        {
+          "title": "关于举办第十五届“中国软件杯”大赛全国总决赛的通知",
+          "url": "https://www.cnsoftbei.com/content-1-1357-1.html",
+          "date": "2026-08-13",
+          "excerpt": "各参赛院校、参赛团队： 大家好!首先衷心感谢各院校、全体参赛师生对本次大赛的积极参与、大力支持与热切期待。自大赛开赛以来，各团队",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://www.cnsoftbei.com/list-1-1.html"
+        },
+        {
+          "title": "第十五届“中国软件杯”大赛全国总决赛三等奖（第一批）",
+          "url": "https://www.cnsoftbei.com/content-1-1355-1.html",
+          "date": "2026-08-12",
+          "excerpt": "注：此排名不分先后团队编号-名称 标蓝色的为通过挑战赛晋级的团队本名单包含初赛晋级、挑战赛晋级、初赛递补晋级。初赛递补晋级为",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://www.cnsoftbei.com/list-1-1.html"
+        },
+        {
+          "title": "第十五届“中国软件杯”大学生软件设计大赛决赛挑战赛方案",
+          "url": "https://www.cnsoftbei.com/content-1-1353-1.html",
+          "date": "2026-07-28",
+          "excerpt": "第十五届中国软件杯大学生软件设计大赛(以下简称大赛)，晋级名单已经公布，详情登录大赛官网:https: www cnsoftbei com content-74-",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://www.cnsoftbei.com/list-1-1.html"
+        },
+        {
+          "title": "关于举办第十五届“中国软件杯”大学生软件设计大赛的通知",
+          "url": "https://www.cnsoftbei.com/content-1-1250-1.html",
+          "date": "2026-03-24",
+          "excerpt": "各级教育主管部门、各院校： 第十五届 \"中国软件杯 \"大学生软件设计大赛(简称 \"大赛 \")报名工作已于近期启动。今年全国两会期间，习近平总书",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://www.cnsoftbei.com/list-1-1.html"
+        },
+        {
+          "title": "关于第十四届＂中国软件杯＂大赛决赛奖金发放的通知",
+          "url": "https://www.cnsoftbei.com/content-1-1192-1.html",
+          "date": "2026-01-04",
+          "excerpt": "关于第十四届 \"中国软件杯 \"大学生软件设计大赛决赛奖金发放的通知 第十四届中国软件杯大学生软件设计大赛总决赛奖金发放相关事宜通知如",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://www.cnsoftbei.com/list-1-1.html"
+        }
+      ],
+      "noticesSource": "https://www.cnsoftbei.com/list-1-1.html",
+      "noticesFetchedAt": "2026-09-21"
+    },
+    {
+      "id": "ccpc-bigdata",
+      "name": "中国高校计算机大赛-大数据挑战赛",
+      "shortName": "大数据挑战赛",
+      "organizer": "教育部高等学校计算机类专业教学指导委员会、全国高等学校计算机教育研究会",
+      "officialUrl": "https://www.heywhale.com/",
+      "officialUrlVerified": true,
+      "tier": "five-star",
+      "tierLabel": "五星",
+      "categories": [
+        "数据科学",
+        "算法竞赛",
+        "公益免费"
+      ],
+      "tags": [
+        "A类",
+        "Kaggle式",
+        "机器学习"
+      ],
+      "targetAudience": "高校在校学生（本科、研究生）",
+      "content": "基于真实行业数据集的天梯赛制（Leaderboard）算法竞赛，参赛者需完成特征工程、模型训练与调优，按线上评测成绩排名。",
+      "knowledge": [
+        "Python 数据分析栈（pandas / numpy / scikit-learn）",
+        "机器学习与深度学习基础",
+        "特征工程与模型融合",
+        "Linux 与 GPU 训练环境",
+        "竞赛评测指标理解（AUC / F1 / RMSE）"
+      ],
+      "preparation": [
+        "提前刷 2-3 个历史赛题建立 baseline",
+        "搭建本地训练与验证流水线，防过拟合",
+        "记录实验台账，保留可复现脚本",
+        "关注赛题数据合规与泄露风险"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok",
+      "redirectedTo": "https://www.heywhale.com/home"
+    },
+    {
+      "id": "ccpc-mobile",
+      "name": "中国高校计算机大赛-移动应用创新赛",
+      "shortName": "移动应用创新赛",
+      "organizer": "教育部高等学校计算机类专业教学指导委员会、全国高等学校计算机教育研究会、Apple",
+      "officialUrl": "https://www.chinamobileapp.org/",
+      "officialUrlVerified": false,
+      "tier": "five-star",
+      "tierLabel": "五星",
+      "categories": [
+        "移动开发",
+        "创新创业",
+        "公益免费"
+      ],
+      "tags": [
+        "A类",
+        "iOS",
+        "作品赛"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "面向移动应用（以 iOS 生态为主）的创新作品赛，评审关注创意、可用性、完成度与社会价值，含复赛与决赛现场展示。",
+      "knowledge": [
+        "Swift / SwiftUI 或跨端框架",
+        "移动端 UI/UX 设计",
+        "后端接口与云服务接入",
+        "产品需求与用户调研",
+        "演示视频与路演表达"
+      ],
+      "preparation": [
+        "确定真实用户痛点，先做小范围访谈",
+        "尽早跑通真机 Demo，避免只交设计稿",
+        "准备 App 上架或 TestFlight 试用链接",
+        "按评审维度自查：创新性 / 完成度 / 实用性"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "dnsfail"
+    },
+    {
+      "id": "strait-computer",
+      "name": "海峡两岸暨港澳地区大学生计算机创新作品赛",
+      "shortName": "海峡赛",
+      "organizer": "全国高等学校计算机教育研究会、广东省计算机学会（组委会常设机构）联合全国各省市计算机学会",
+      "officialUrl": "https://www.gdca.org.cn/",
+      "officialUrlVerified": true,
+      "tier": "four-star",
+      "tierLabel": "四星",
+      "categories": [
+        "创新作品",
+        "区域赛",
+        "公益免费"
+      ],
+      "tags": [
+        "A类",
+        "老牌赛事",
+        "作品答辩"
+      ],
+      "targetAudience": "海峡两岸暨港澳地区高校在校学生",
+      "content": "原“泛珠三角大学生计算机作品赛”，已举办二十余届。按本科/高职分组提交计算机创新作品，经省赛选拔进入总决赛，现场演示与专家答辩。",
+      "knowledge": [
+        "完整项目开发能力（前端+后端+部署）",
+        "创新点提炼与专利/论文意识",
+        "系统演示与现场答辩",
+        "技术文档与展板制作"
+      ],
+      "preparation": [
+        "先参加本省赛区选拔，注意各省截止时间不同",
+        "准备 5 分钟演示 + 3 分钟问答",
+        "突出“已完成度”而非“设想”，带可运行系统",
+        "整理软著/论文等成果佐证"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "certissue"
+    },
+    {
+      "id": "huawei-ict",
+      "name": "华为 ICT 大赛",
+      "shortName": "华为 ICT",
+      "organizer": "华为技术有限公司",
+      "officialUrl": "https://e.huawei.com/cn/talent/ict-academy",
+      "officialUrlVerified": true,
+      "tier": "four-star",
+      "tierLabel": "四星",
+      "categories": [
+        "ICT 技术",
+        "企业赛",
+        "实践赛"
+      ],
+      "tags": [
+        "A类",
+        "认证导向",
+        "云网算"
+      ],
+      "targetAudience": "全球高校在校学生",
+      "content": "分实践赛与创新赛。实践赛考察网络、云、计算、AI 等方向的理论与实验操作，逐级为校赛-省赛-国家赛-全球赛；创新赛以 ICT 技术解决行业问题。",
+      "knowledge": [
+        "计算机网络与 TCP/IP",
+        "云计算与虚拟化（华为云）",
+        "数据通信 / 存储 / AI 其中一方向",
+        "Linux 运维与实验配置",
+        "英文材料阅读（全球赛）"
+      ],
+      "preparation": [
+        "选定一个技术赛道并考取对应 HCIA/HCIP 认证打基础",
+        "用华为云沙箱反复练习实验题",
+        "组队 3 人，明确理论与实验分工",
+        "关注官网报名窗口，通常春季启动"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok",
+      "redirectedTo": "http://r.huaweistatic.com/s/hwtalent/lst/ict-academy/"
+    },
+    {
+      "id": "iot-design",
+      "name": "全国大学生物联网设计竞赛",
+      "shortName": "物联网设计竞赛",
+      "organizer": "教育部高等学校计算机类专业教学指导委员会、上海交通大学",
+      "officialUrl": "https://iot.sjtu.edu.cn/",
+      "officialUrlVerified": true,
+      "tier": "four-star",
+      "tierLabel": "四星",
+      "categories": [
+        "物联网",
+        "嵌入式",
+        "硬件作品"
+      ],
+      "tags": [
+        "A类",
+        "软硬结合",
+        "现场演示"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "以物联网技术为核心的软硬件作品赛，要求完成感知层、网络层与应用层的完整系统，分赛区初赛与全国总决赛现场演示答辩。",
+      "knowledge": [
+        "单片机/嵌入式开发（STM32、ESP32 等）",
+        "传感器与通信协议（MQTT / LoRa / NB-IoT）",
+        "云平台与数据可视化",
+        "电路与硬件调试",
+        "结构件与外壳制作"
+      ],
+      "preparation": [
+        "尽早确定选题并采购器件，预留调试时间",
+        "保证现场断网也能演示（本地兜底方案）",
+        "准备完整系统框图与技术指标实测数据",
+        "关注华为/ TI 等企业命题赛道，资源支持更多"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "fwwb",
+      "name": "中国大学生服务外包创新创业大赛",
+      "shortName": "服创大赛",
+      "organizer": "教育部、商务部、无锡市人民政府",
+      "officialUrl": "https://www.fwwb.org.cn/",
+      "officialUrlVerified": true,
+      "tier": "four-star",
+      "tierLabel": "四星",
+      "categories": [
+        "创新创业",
+        "企业命题",
+        "服务外包"
+      ],
+      "tags": [
+        "A类",
+        "双命题",
+        "商业计划"
+      ],
+      "targetAudience": "高校在校学生（含研究生）",
+      "content": "分企业命题赛道与创业实践赛道，参赛团队需按企业真实需求交付软件作品，或提交完整创业项目与商业计划书，经区域赛进入全国决赛。",
+      "knowledge": [
+        "需求分析与方案设计",
+        "Web / 移动开发实现",
+        "商业画布与财务测算",
+        "路演 PPT 与答辩",
+        "知识产权与合规常识"
+      ],
+      "preparation": [
+        "选题时优先选技术栈匹配的企业命题",
+        "创业赛道需准备真实用户数据与营收模型",
+        "按评分表逐条对齐交付物",
+        "保留开发过程记录作为工作量证明"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok",
+      "notices": [
+        {
+          "title": "第十七届中国大学生服务外包创新创业大赛全国赛决赛获 ...",
+          "url": "https://www.fwwb.org.cn/news/show/661",
+          "date": "2026-08-24",
+          "excerpt": "第十七届中国大学生服务外包创新创业大赛全国赛决赛获奖名单公告",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://www.fwwb.org.cn/"
+        },
+        {
+          "title": "关于中国大学生服务外包创新创业大赛开通D赛道的说明",
+          "url": "https://www.fwwb.org.cn/news/show/595",
+          "date": "2026-01-11",
+          "excerpt": "",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "https://www.fwwb.org.cn/"
+        },
+        {
+          "title": "第十七届中国大学生服务外包创新创业大赛全国赛获奖团 ...",
+          "url": "https://www.fwwb.org.cn/news/show/663",
+          "date": "2026-08-27",
+          "excerpt": "第十七届中国大学生服务外包创新创业大赛全国赛获奖团队详细信息",
+          "tags": [
+            "赛程",
+            "结果"
+          ],
+          "sourcePage": "https://www.fwwb.org.cn/"
+        },
+        {
+          "title": "关于第十七届服创大赛全国赛一、二等奖获奖证书已开放 ...",
+          "url": "https://www.fwwb.org.cn/news/show/662",
+          "date": "2026-08-25",
+          "excerpt": "各获奖团队：第十七届服创大赛全国赛获奖证书为电子证书，现全国赛一、二等奖获奖证书已开放下载，请获奖团队于规定时间内登录报名系统，点击左侧栏“",
+          "tags": [
+            "赛程",
+            "结果"
+          ],
+          "sourcePage": "https://www.fwwb.org.cn/"
+        },
+        {
+          "title": "关于服创大赛指定江苏万维艾斯网络智能产业创新中心有限 ...",
+          "url": "https://www.fwwb.org.cn/news/show/594",
+          "date": "2026-01-11",
+          "excerpt": "",
+          "tags": [],
+          "sourcePage": "https://www.fwwb.org.cn/"
+        },
+        {
+          "title": "第十五届中国大学生服务外包创新创业大赛在锡圆满收官",
+          "url": "https://www.fwwb.org.cn/news/show/529",
+          "date": "2024-08-12",
+          "excerpt": "2024年8月7日-9日，第十五届中国大学生服务外包创新创业大赛决赛在江苏无锡举行。经过预审、区域赛决赛和全国总决赛的激烈角逐，重庆大学、东",
+          "tags": [],
+          "sourcePage": "https://www.fwwb.org.cn/"
+        },
+        {
+          "title": "第十三届中国大学生服务外包创新创业大赛在锡落幕，感谢 ...",
+          "url": "https://www.fwwb.org.cn/news/show/392",
+          "date": "2022-08-08",
+          "excerpt": "8月7日，第十三届中国大学生服务外包创新创业大赛在无锡落幕。最终经过激烈的网络答辩，来自南京大学，电子科技大学、中南大学等的24支代表队分获",
+          "tags": [],
+          "sourcePage": "https://www.fwwb.org.cn/"
+        },
+        {
+          "title": "​第十二届中国大学生服务外包创新创业大赛圆满收官",
+          "url": "https://www.fwwb.org.cn/news/show/347",
+          "date": "2021-08-25",
+          "excerpt": "8月24日上午，第十二届中国大学生服务外包创新创业大赛在无锡圆满收官。中国工程院院士、江南大学校长陈卫，副市长周常青出席活动并颁奖。江苏省商",
+          "tags": [],
+          "sourcePage": "https://www.fwwb.org.cn/"
+        }
+      ],
+      "noticesSource": "https://www.fwwb.org.cn/",
+      "noticesFetchedAt": "2026-09-21"
+    },
+    {
+      "id": "ccpc-ai",
+      "name": "中国高校计算机大赛-人工智能创意赛",
+      "shortName": "AI 创意赛",
+      "organizer": "教育部高等学校计算机类专业教学指导委员会、全国高等学校计算机教育研究会、百度",
+      "officialUrl": "https://aistudio.baidu.com/",
+      "officialUrlVerified": true,
+      "tier": "four-star",
+      "tierLabel": "四星",
+      "categories": [
+        "人工智能",
+        "创意作品",
+        "企业赛"
+      ],
+      "tags": [
+        "A类",
+        "飞桨",
+        "AI 应用"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "基于国产深度学习框架（飞桨）的 AI 创意应用赛，鼓励将 AI 能力落到具体行业场景，评审关注创意、技术实现与落地价值。",
+      "knowledge": [
+        "Python 与深度学习基础",
+        "飞桨 / PaddlePaddle 使用",
+        "CV 或 NLP 至少一个方向",
+        "模型部署与推理加速",
+        "AI 伦理与数据合规"
+      ],
+      "preparation": [
+        "先在 AI Studio 跑通官方示例再改造成自己的题目",
+        "准备可交互 Demo（网页或小程序）而非只放论文",
+        "量化效果：准确率、响应时间、成本对比",
+        "注意数据来源合法性"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "gplt",
+      "name": "中国高校计算机大赛-团体程序设计天梯赛",
+      "shortName": "天梯赛",
+      "organizer": "教育部高等学校计算机类专业教学指导委员会、全国高等学校计算机教育研究会",
+      "officialUrl": "https://gplt.patest.cn/",
+      "officialUrlVerified": true,
+      "tier": "four-star",
+      "tierLabel": "四星",
+      "categories": [
+        "程序设计",
+        "团队赛",
+        "算法"
+      ],
+      "tags": [
+        "A类",
+        "团体计分",
+        "PAT 体系"
+      ],
+      "targetAudience": "高校在校学生（以院校为单位组队）",
+      "content": "以院校为单位组队（每队 10 人）的在线程序设计团体赛，题目按基础、进阶、登顶三级递进，按团队总分与个人分档（珠峰/华山/沧海）评奖。",
+      "knowledge": [
+        "C / C++ 熟练编程",
+        "数据结构与基础算法",
+        "动态规划、图论、字符串",
+        "限时压力下的代码稳定性",
+        "团队梯度配置策略"
+      ],
+      "preparation": [
+        "按“冲峰+稳分”原则配置队员梯度",
+        "用 PAT 题库和往年真题做限时训练",
+        "重点补基础题正确率，避免低级失分",
+        "赛前统一编译环境与 IO 模板"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "ccsp",
+      "name": "CCF 大学生计算机系统与程序设计竞赛",
+      "shortName": "CCSP",
+      "organizer": "中国计算机学会（CCF）",
+      "officialUrl": "https://ccsp.ccf.org.cn/",
+      "officialUrlVerified": true,
+      "tier": "three-star",
+      "tierLabel": "三星",
+      "categories": [
+        "系统能力",
+        "程序设计",
+        "算法"
+      ],
+      "tags": [
+        "A类",
+        "CCF 主办",
+        "高难度"
+      ],
+      "targetAudience": "高校在校学生（多由 CCF 会员高校选派）",
+      "content": "分赛区与全国赛，考察算法、数据结构与系统设计综合能力，题目难度高于普通程序设计赛，强调工程实现与性能优化。",
+      "knowledge": [
+        "高级数据结构与算法",
+        "操作系统与计算机组成原理",
+        "C++ 工程实现与性能调优",
+        "大规模数据处理思维",
+        "调试与内存管理"
+      ],
+      "preparation": [
+        "先通过 CSP 认证取得参赛资格（多数赛区要求）",
+        "系统复习算法 + 系统类知识，不能只刷题",
+        "训练长时限（5 小时）体能与节奏",
+        "研究历年真题的评分与部分分策略"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok",
+      "notices": [
+        {
+          "title": "2026 CCF CCSP竞赛将于10月21~22日举办，9月9日开启报名",
+          "url": "https://ccsp.ccf.org.cn/ccsp/tzgg/2026-09-09/931080.shtml",
+          "date": "2026-09-09",
+          "excerpt": "2026 CCF CCSP竞赛将于10月21~22日在四川成都举办，报名时间为2026年9月9日-10月11日。中国计算机学会大学生计算机系统与程序设计竞赛（简称CCF CCSP竞赛）是由中国计算机学会（CCF）发起并主办的面向大学生的计算机",
+          "tags": [
+            "报名",
+            "赛程"
+          ],
+          "sourcePage": "https://ccsp.ccf.org.cn/ccsp/tzgg/",
+          "keyDates": {
+            "registration": "2026-09-09 ~ 2026-10-11",
+            "eventDate": "2026-10-21 ~ 2026-10-22"
+          }
+        },
+        {
+          "title": "2025 CCF CCSP竞赛将于10月22~23日举办，9月15日开启报名",
+          "url": "https://ccsp.ccf.org.cn/ccsp/tzgg/2025-09-15/848567.shtml",
+          "date": "2025-09-15",
+          "excerpt": "2025 CCF CCSP竞赛将于10月22~23日在黑龙江哈尔滨举办，报名时间为2025年9月15日-2025年10月12日。中国计算机学会大学生计算机系统与程序设计竞赛（简称CCF CCSP竞赛）是由中国计算机学会（CCF）发起并主办的面向大",
+          "tags": [
+            "报名",
+            "赛程"
+          ],
+          "sourcePage": "https://ccsp.ccf.org.cn/ccsp/tzgg/",
+          "keyDates": {
+            "registration": "2025-09-15 ~ 2025-10-12",
+            "eventDate": "2025-10-22 ~ 2025-10-23"
+          }
+        },
+        {
+          "title": "2024 CCF CCSP竞赛将于10月23~24日举办，9月19日开启报名",
+          "url": "https://ccsp.ccf.org.cn/ccsp/tzgg/2024-09-14/830020.shtml",
+          "date": "2024-09-14",
+          "excerpt": "2024 CCF CCSP竞赛将于10月23~24日在浙江金华举办，报名时间为2024年9月19日-2024年10月13日。中国计算机学会大学生计算机系统与程序设计竞赛（简称CCF CCSP竞赛）是由中国计算机学会（CCF）发起并主办的面向大学生",
+          "tags": [
+            "报名",
+            "赛程"
+          ],
+          "sourcePage": "https://ccsp.ccf.org.cn/ccsp/tzgg/",
+          "keyDates": {
+            "registration": "2024-09-19 ~ 2024-10-13",
+            "eventDate": "2024-10-23 ~ 2024-10-24"
+          }
+        },
+        {
+          "title": "2023 CCF CCSP竞赛报名开启，10月25~26日举办",
+          "url": "https://ccsp.ccf.org.cn/ccsp/tzgg/2023-09-19/795683.shtml",
+          "date": "2023-09-19",
+          "excerpt": "2023 CCF CCSP将于10月25~26日在沈阳举办，报名已开启，报名时间为2023年9月18日-2023年10月15日。系统与程序设计能力是计算机专业学生重要的基本专业能力。CCF CCSP是由CCF发起并主办的面向大学生的计算机系统与程",
+          "tags": [
+            "报名",
+            "赛程"
+          ],
+          "sourcePage": "https://ccsp.ccf.org.cn/ccsp/tzgg/",
+          "keyDates": {
+            "registration": "2023-09-18 ~ 2023-10-15",
+            "eventDate": "2023-10-25 ~ 2023-10-26"
+          }
+        },
+        {
+          "title": "2022 CCF大学生计算机系统与程序设计竞赛（CCSP） 报名通知（有更新）",
+          "url": "https://ccsp.ccf.org.cn/ccsp/tzgg/2022-11-14/779829.shtml",
+          "date": "2022-11-14",
+          "excerpt": "受疫情影响，原定于12月7~8日在贵阳举办的2022 CCSP全国赛改为12月11日在各认证点高校举办全国赛及分赛，报名截止时间为2022年11月28日。系统与程序设计能力是计算机专业学生重要的基本专业能力。CCF CCSP是由CCF发",
+          "tags": [
+            "报名"
+          ],
+          "sourcePage": "https://ccsp.ccf.org.cn/ccsp/tzgg/",
+          "keyDates": {
+            "registration": "2022-11-28",
+            "eventDate": "2022-12-07 ~ 2022-12-08"
+          }
+        },
+        {
+          "title": "关于调整2026 CCF CCSP竞赛选手可携带资料规定的通知",
+          "url": "https://ccsp.ccf.org.cn/ccsp/tzgg/2026-09-14/932132.shtml",
+          "date": "2026-09-14",
+          "excerpt": "2026 CCF CCSP竞赛（中国计算机学会大学生计算机系统与程序设计竞赛）将于2026年10月21日9:00—21:00在四川省成都市西华大学（郫都校区）举行。鉴于当前大语言模型（LLM）技术发展迅速，为保障竞赛的公平、公正，经C",
+          "tags": [],
+          "sourcePage": "https://ccsp.ccf.org.cn/ccsp/tzgg/",
+          "keyDates": {
+            "eventDate": "2026-10-21"
+          }
+        },
+        {
+          "title": "第31次CCF CSP认证",
+          "url": "https://ccsp.ccf.org.cn/ccsp/tzgg/2023-08-31/795250.shtml",
+          "date": "2023-08-31",
+          "excerpt": "主题：第31次CCF CSP认证日期：2023/9/17联系人：刘老师联系Email：csp@ccf.org.cn联系电话：0512-65900856-29",
+          "tags": [],
+          "sourcePage": "https://ccsp.ccf.org.cn/ccsp/tzgg/"
+        },
+        {
+          "title": "第30次CCF CSP认证",
+          "url": "https://ccsp.ccf.org.cn/ccsp/tzgg/2023-04-20/791693.shtml",
+          "date": "2023-04-20",
+          "excerpt": "主题：第30次CCF CSP认证日期：2023/5/28联系人：刘老师联系Email：csp@ccf.org.cn联系电话：0512-65900856-29",
+          "tags": [],
+          "sourcePage": "https://ccsp.ccf.org.cn/ccsp/tzgg/"
+        }
+      ],
+      "noticesSource": "https://ccsp.ccf.org.cn/ccsp/tzgg/",
+      "noticesFetchedAt": "2026-09-21",
+      "keyDates": {
+        "registration": "2026-09-09 ~ 2026-10-11",
+        "eventDate": "2026-10-21 ~ 2026-10-22"
+      },
+      "keyDatesFrom": {
+        "title": "2026 CCF CCSP竞赛将于10月21~22日举办，9月9日开启报名",
+        "url": "https://ccsp.ccf.org.cn/ccsp/tzgg/2026-09-09/931080.shtml"
+      }
+    },
+    {
+      "id": "tianchi",
+      "name": "阿里云天池大学生竞赛",
+      "shortName": "天池大赛",
+      "organizer": "阿里巴巴集团（阿里云天池平台）",
+      "officialUrl": "https://tianchi.aliyun.com/",
+      "officialUrlVerified": true,
+      "tier": "three-star",
+      "tierLabel": "三星",
+      "categories": [
+        "数据科学",
+        "算法竞赛",
+        "企业赛"
+      ],
+      "tags": [
+        "A类",
+        "真实业务数据",
+        "线上评测"
+      ],
+      "targetAudience": "高校在校学生及开发者",
+      "content": "依托天池平台的多个算法赛道（CV、NLP、推荐、风控、时序等），以线上评测 Leaderboard 排名，优秀队伍进入答辩环节。",
+      "knowledge": [
+        "Python / SQL 数据处理",
+        "机器学习与深度学习框架（PyTorch 等）",
+        "特征工程与模型融合",
+        "分布式训练与算力调度",
+        "业务指标到算法指标的映射"
+      ],
+      "preparation": [
+        "选择与自身方向匹配的赛道，别盲目追热门",
+        "建立严格本地验证集，防止榜单过拟合",
+        "沉淀通用代码框架，多赛道复用",
+        "关注天池官方 baseline 并快速超越"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "ncscc",
+      "name": "全国大学生计算机系统能力大赛",
+      "shortName": "系统能力大赛",
+      "organizer": "教育部高等学校计算机类专业教学指导委员会、全国高等学校计算机教育研究会",
+      "officialUrl": "https://www.saikr.com/",
+      "officialUrlVerified": true,
+      "tier": "three-star",
+      "tierLabel": "三星",
+      "categories": [
+        "系统能力",
+        "编译/操作系统",
+        "硬件设计"
+      ],
+      "tags": [
+        "A类",
+        "硬核",
+        "多赛道"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "设操作系统设计、编译器设计、数据库设计、CPU 设计等多个赛道，要求在给定框架下完成真实系统实现并通过功能与性能评测。",
+      "knowledge": [
+        "操作系统原理与内核编程（C / RISC-V）",
+        "编译原理与代码生成",
+        "计算机体系结构 / Verilog",
+        "数据库内核与存储引擎",
+        "Git 与大项目协作、测试驱动开发"
+      ],
+      "preparation": [
+        "按赛道选定并精读官方框架文档",
+        "制定里程碑，先跑通最小可用版本再优化",
+        "持续跑官方测试集，量化通过率",
+        "组队 3-4 人并固定代码评审节奏"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "software-innovation",
+      "name": "全国大学生软件创新大赛",
+      "shortName": "软件创新大赛",
+      "organizer": "教育部高等学校软件工程专业教学指导委员会、示范性软件学院联盟",
+      "officialUrl": "https://www.swcontest.com.cn/",
+      "officialUrlVerified": true,
+      "tier": "three-star",
+      "tierLabel": "三星",
+      "categories": [
+        "软件创新",
+        "作品赛",
+        "创新创业"
+      ],
+      "tags": [
+        "A类",
+        "作品评审",
+        "双创"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "围绕年度主题提交软件创新作品，经初赛材料评审、复赛与全国总决赛现场答辩，评审关注创新性、技术含量与实用价值。",
+      "knowledge": [
+        "全栈开发能力",
+        "创新点与竞品分析",
+        "软件测试与质量保障",
+        "知识产权与商业模式",
+        "演示与答辩技巧"
+      ],
+      "preparation": [
+        "对齐年度主题，避免偏题",
+        "准备可运行系统 + 演示视频双保险",
+        "整理用户反馈或试点数据增强说服力",
+        "按评分细则逐项自查材料完整性"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "infosec",
+      "name": "全国大学生信息安全竞赛",
+      "shortName": "信息安全竞赛",
+      "organizer": "教育部高等学校网络空间安全专业教学指导委员会",
+      "officialUrl": "https://www.ciscn.cn/",
+      "officialUrlVerified": true,
+      "tier": "three-star",
+      "tierLabel": "三星",
+      "categories": [
+        "网络安全",
+        "CTF",
+        "作品赛"
+      ],
+      "tags": [
+        "A类",
+        "双赛道",
+        "攻防"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "含作品赛与创新实践能力赛（CTF）。作品赛提交安全类系统或工具；CTF 采用解题与攻防对抗形式，考察逆向、Pwn、Web、密码、杂项等方向。",
+      "knowledge": [
+        "Web 安全（SQL 注入 / XSS / SSRF）",
+        "二进制逆向与 Pwn（IDA、pwntools）",
+        "密码学基础",
+        "网络协议与流量分析",
+        "安全工具链与脚本编写（Python）"
+      ],
+      "preparation": [
+        "用 CTFtime/BUUCTF 等平台刷题建立题感",
+        "组队分方向：Web / Pwn / Reverse / Crypto / Misc",
+        "准备常用脚本与工具环境，赛前统一",
+        "作品赛需注意不得含真实攻击性代码"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "certissue"
+    },
+    {
+      "id": "ccpc-embedded",
+      "name": "中国高校计算机大赛-嵌入式设计赛",
+      "shortName": "嵌入式设计赛",
+      "organizer": "教育部高等学校计算机类专业教学指导委员会、全国高等学校计算机教育研究会",
+      "officialUrl": "https://www.cncc-embedded.org.cn/",
+      "officialUrlVerified": false,
+      "tier": "three-star",
+      "tierLabel": "三星",
+      "categories": [
+        "嵌入式",
+        "硬件作品",
+        "系统设计"
+      ],
+      "tags": [
+        "A类",
+        "软硬结合",
+        "实时系统"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "以嵌入式系统为核心的软硬件作品赛，要求完成硬件平台搭建、驱动与应用程序开发，并进行现场功能演示与答辩。",
+      "knowledge": [
+        "C 语言与嵌入式 Linux / RTOS",
+        "ARM 平台与驱动开发",
+        "外设接口（I2C / SPI / UART）",
+        "边缘 AI 部署（可选）",
+        "硬件焊接与示波器调试"
+      ],
+      "preparation": [
+        "确定硬件平台并提前备货，留出损坏替换",
+        "先做最小系统验证，再叠功能",
+        "现场演示准备离线方案与录屏",
+        "整理硬件清单、功耗与性能指标"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "dnsfail"
+    },
+    {
+      "id": "ccpc-network",
+      "name": "中国高校计算机大赛-网络技术挑战赛",
+      "shortName": "网络技术挑战赛",
+      "organizer": "教育部高等学校计算机类专业教学指导委员会、全国高等学校计算机教育研究会",
+      "officialUrl": "https://netc.nwpu.edu.cn/",
+      "officialUrlVerified": false,
+      "tier": "three-star",
+      "tierLabel": "三星",
+      "categories": [
+        "网络技术",
+        "实践赛",
+        "SDN"
+      ],
+      "tags": [
+        "A类",
+        "网络工程",
+        "实验操作"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "分创意（作品）与攻关（实验技能）两类赛道，考察网络规划、协议分析、SDN/NFV 与网络安全等网络工程实践能力。",
+      "knowledge": [
+        "TCP/IP 与路由交换",
+        "网络协议分析与抓包（Wireshark）",
+        "SDN / OpenFlow / 网络编程",
+        "Linux 网络配置与虚拟化",
+        "网络攻防与安全加固"
+      ],
+      "preparation": [
+        "按赛道决定偏作品还是偏实验，训练重点不同",
+        "搭本地虚拟网络实验环境（GNS3 / Mininet）",
+        "限时实验题要练到命令熟练",
+        "作品类需给出可量化的性能对比"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "dnsfail"
+    },
+    {
+      "id": "ccpc-interaction",
+      "name": "中国高校计算机大赛-智能交互创新赛",
+      "shortName": "智能交互创新赛",
+      "organizer": "教育部高等学校计算机类专业教学指导委员会、全国高等学校计算机教育研究会、OPPO",
+      "officialUrl": "https://www.oppo.com/cn/",
+      "officialUrlVerified": true,
+      "tier": "three-star",
+      "tierLabel": "三星",
+      "categories": [
+        "人机交互",
+        "智能终端",
+        "创意作品"
+      ],
+      "tags": [
+        "A类",
+        "交互设计",
+        "企业赛"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "围绕智能终端与多模态交互的创新作品赛，鼓励结合语音、视觉、手势等交互方式解决真实场景问题。",
+      "knowledge": [
+        "移动端 / 端侧 AI 开发",
+        "交互设计与可用性测试",
+        "多模态算法（语音识别、视觉感知）",
+        "原型工具（Figma / ProtoPie）",
+        "用户研究方法"
+      ],
+      "preparation": [
+        "从真实场景痛点出发，先做用户测试",
+        "保证 Demo 可现场操作，不依赖网络",
+        "用易用性指标（任务完成率、耗时）证明价值",
+        "关注企业命题方向与硬件支持政策"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "wutong-cup",
+      "name": "中国移动“梧桐杯”大数据创新大赛",
+      "shortName": "梧桐杯",
+      "organizer": "中国移动通信集团有限公司",
+      "officialUrl": "https://wx.10086.cn/",
+      "officialUrlVerified": true,
+      "tier": "three-star",
+      "tierLabel": "三星",
+      "categories": [
+        "大数据",
+        "企业赛",
+        "创新应用"
+      ],
+      "tags": [
+        "A类",
+        "运营商数据",
+        "双赛道"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "设算法赛与创意赛，基于运营商脱敏数据解决通信、城市治理、金融风控等场景问题，优胜者可获实习与奖金。",
+      "knowledge": [
+        "数据挖掘与机器学习",
+        "图算法与时空数据处理",
+        "数据合规与隐私保护",
+        "业务场景建模",
+        "方案书撰写"
+      ],
+      "preparation": [
+        "先摸清数据字段与业务含义，再做特征",
+        "创意赛突出可落地的商业闭环",
+        "注意数据使用协议，不得外传",
+        "预留时间做方案路演演练"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "zte-pengyue",
+      "name": "中兴捧月全球精英挑战赛",
+      "shortName": "中兴捧月",
+      "organizer": "中兴通讯股份有限公司",
+      "officialUrl": "https://job.zte.com.cn/",
+      "officialUrlVerified": true,
+      "tier": "three-star",
+      "tierLabel": "三星",
+      "categories": [
+        "企业赛",
+        "算法",
+        "软件/硬件"
+      ],
+      "tags": [
+        "A类",
+        "招聘导向",
+        "多赛道"
+      ],
+      "targetAudience": "全球高校在校学生",
+      "content": "设算法、软件、硬件、营销等多赛道，题目贴近通信与终端研发实际，成绩优异者进入中兴人才池并获得实习/录用机会。",
+      "knowledge": [
+        "C / C++ 或 Python 编程",
+        "算法与数据结构",
+        "通信原理 / 信号处理（部分赛道）",
+        "嵌入式或射频基础（硬件赛道）",
+        "英文技术文档阅读"
+      ],
+      "preparation": [
+        "把该赛事当作求职练兵，重视简历同步更新",
+        "按赛道刷对应真题与面经",
+        "算法赛道注重代码效率与边界处理",
+        "关注赛程与招聘批次的联动"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok",
+      "redirectedTo": "https://job.zte.com.cn/cn/"
+    },
+    {
+      "id": "tipdm",
+      "name": "“泰迪杯”数据挖掘挑战赛",
+      "shortName": "泰迪杯",
+      "organizer": "泰迪智能科技（广东泰迪智能科技股份有限公司）",
+      "officialUrl": "https://www.tipdm.org/",
+      "officialUrlVerified": true,
+      "tier": "two-star",
+      "tierLabel": "两星",
+      "categories": [
+        "数据挖掘",
+        "作品赛",
+        "收费赛事"
+      ],
+      "tags": [
+        "B类",
+        "论文+代码",
+        "入门友好"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "给定真实企业数据集，要求完成数据清洗、建模与结果分析，提交论文与代码，评审兼顾方法合理性与工程可复现性。",
+      "knowledge": [
+        "Python 数据处理（pandas）",
+        "统计分析与可视化",
+        "常用机器学习模型",
+        "科技论文写作",
+        "结果可复现的代码组织"
+      ],
+      "preparation": [
+        "严格按论文模板组织，摘要先写结论",
+        "保留数据清洗全过程与中间结果",
+        "图表规范、标注单位与来源",
+        "注意该赛事为收费赛事，性价比自行权衡"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok",
+      "notices": [
+        {
+          "title": "中国国际大学生创新大赛（2026）",
+          "url": "https://www.tipdm.org:10010/#/competition/2092870130517327872",
+          "date": null,
+          "excerpt": "奖金 0 · 参赛队数 7",
+          "tags": [],
+          "sourcePage": "https://www.tipdm.org/"
+        },
+        {
+          "title": "深圳市第十六届职工技术创新运动会暨2026年深圳技能大赛——大数据技术与应用技能竞赛",
+          "url": "https://www.tipdm.org:10010/#/competition/2099381602323972096",
+          "date": null,
+          "excerpt": "奖金 35000 · 参赛队数 0",
+          "tags": [],
+          "sourcePage": "https://www.tipdm.org/"
+        },
+        {
+          "title": "2026年淄博市“技能兴淄”数据分析职业技能竞赛",
+          "url": "https://www.tipdm.org:10010/#/competition/2039879041267449856",
+          "date": null,
+          "excerpt": "奖金 0 · 参赛队数 45",
+          "tags": [],
+          "sourcePage": "https://www.tipdm.org/"
+        }
+      ],
+      "noticesSource": "https://www.tipdm.org/",
+      "noticesFetchedAt": "2026-09-21"
+    },
+    {
+      "id": "baidu-star",
+      "name": "百度之星程序设计大赛",
+      "shortName": "百度之星",
+      "organizer": "百度公司",
+      "officialUrl": "https://star.baidu.com/",
+      "officialUrlVerified": true,
+      "tier": "two-star",
+      "tierLabel": "两星",
+      "categories": [
+        "程序设计",
+        "算法",
+        "企业赛"
+      ],
+      "tags": [
+        "B类",
+        "ACM 赛制",
+        "历史悠久"
+      ],
+      "targetAudience": "高校在校学生及开发者",
+      "content": "按 ACM/ICPC 赛制的个人算法竞赛，设初赛与决赛，题目兼顾算法思维与工程实现，成绩优异者可获百度实习机会。",
+      "knowledge": [
+        "C++ / Java 熟练编程",
+        "经典算法与数据结构",
+        "数学与组合计数",
+        "限时编码与调试",
+        "对拍与随机数据测试"
+      ],
+      "preparation": [
+        "按 ACM 赛制限时模拟训练（2-3 小时场次）",
+        "总结常考模型：DP、图论、数论、字符串",
+        "准备代码模板库并熟练调用",
+        "重视罚时，先易后难"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "matedata-cup",
+      "name": "码蹄杯全国大学生程序设计大赛",
+      "shortName": "码蹄杯",
+      "organizer": "全国高等学校计算机教育研究会、清华大学出版社",
+      "officialUrl": "https://www.matedata.cn/",
+      "officialUrlVerified": false,
+      "tier": "two-star",
+      "tierLabel": "两星",
+      "categories": [
+        "程序设计",
+        "算法",
+        "在线评测"
+      ],
+      "tags": [
+        "B类",
+        "阶梯难度",
+        "线上赛"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "线上程序设计竞赛，题目难度分层，采用在线评测自动判题，按解题数与罚时排名，设多轮赛次累计成绩。",
+      "knowledge": [
+        "基础编程语法与 IO 处理",
+        "基础算法与数据结构",
+        "模拟与枚举技巧",
+        "边界条件处理",
+        "快速读题与分类"
+      ],
+      "preparation": [
+        "从简单题保证通过率，稳住基础分",
+        "用往年赛题熟悉平台判题规则",
+        "训练 1 小时内完成前若干简单题",
+        "组队或单人赛制需提前确认"
+      ],
+      "sources": [
+        "craii-2026"
+      ]
+    },
+    {
+      "id": "digital-literacy",
+      "name": "全国大学生计算机应用能力与数字素养大赛",
+      "shortName": "数字素养大赛",
+      "organizer": "全国高等学校计算机教育研究会",
+      "officialUrl": "https://www.nccda.com.cn/",
+      "officialUrlVerified": false,
+      "tier": "two-star",
+      "tierLabel": "两星",
+      "categories": [
+        "应用能力",
+        "数字素养",
+        "办公与编程"
+      ],
+      "tags": [
+        "B类",
+        "覆盖面广",
+        "多赛道"
+      ],
+      "targetAudience": "高校在校学生（含非计算机专业）",
+      "content": "考察计算机应用能力与数字素养，设办公自动化、程序设计、数据分析、数字媒体等多赛道，适合不同专业背景学生参与。",
+      "knowledge": [
+        "Office / WPS 高级应用",
+        "基础编程或数据处理",
+        "信息检索与数字工具使用",
+        "多媒体制作基础",
+        "信息安全常识"
+      ],
+      "preparation": [
+        "按自身专业优势选赛道，扬长避短",
+        "做官方样题熟悉题型与时间分配",
+        "非计算机专业可从办公与媒体赛道切入",
+        "注意软件版本差异带来的操作区别"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "dnsfail"
+    },
+    {
+      "id": "software-testing",
+      "name": "全国大学生软件测试大赛",
+      "shortName": "软件测试大赛",
+      "organizer": "教育部软件工程专业教学指导委员会、中国计算机学会软件工程专委会",
+      "officialUrl": "https://www.aitestunion.com/",
+      "officialUrlVerified": false,
+      "tier": "two-star",
+      "tierLabel": "两星",
+      "categories": [
+        "软件测试",
+        "质量保障",
+        "实践赛"
+      ],
+      "tags": [
+        "B类",
+        "技能稀缺",
+        "岗位直通"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "以软件测试技能为核心的实践赛，含功能测试、性能测试、自动化测试与移动应用测试等赛项，按测试用例设计与缺陷发现评分。",
+      "knowledge": [
+        "测试理论与用例设计方法",
+        "Selenium / Appium 自动化",
+        "JMeter / LoadRunner 性能测试",
+        "缺陷管理与测试报告",
+        "基础编程（Python / Java）"
+      ],
+      "preparation": [
+        "熟练掌握至少一套自动化测试工具链",
+        "练习按需求文档快速生成用例集",
+        "性能测试要会看指标：TPS、响应时间、资源占用",
+        "测试报告写清复现步骤与严重等级"
+      ],
+      "sources": [
+        "craii-2026"
+      ]
+    },
+    {
+      "id": "iscc",
+      "name": "全国大学生信息安全与对抗技术竞赛",
+      "shortName": "ISCC",
+      "organizer": "中国兵工学会、北京理工大学",
+      "officialUrl": "https://www.isclab.org.cn/",
+      "officialUrlVerified": true,
+      "tier": "two-star",
+      "tierLabel": "两星",
+      "categories": [
+        "网络安全",
+        "攻防对抗",
+        "实践赛"
+      ],
+      "tags": [
+        "B类",
+        "CTF 分段赛",
+        "老牌赛事"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "分线上赛与线下赛，涵盖 CTF 解题、渗透对抗、数据安全等环节，采用分段晋级制，强调实战攻防与团队协作。",
+      "knowledge": [
+        "CTF 五大方向基础",
+        "渗透测试流程与工具（nmap、burp）",
+        "应急响应与日志分析",
+        "脚本自动化（Python）",
+        "内网渗透基础"
+      ],
+      "preparation": [
+        "赛前组队分方向，每人主攻 1-2 类",
+        "搭建个人靶场环境持续练习",
+        "整理常用 payload 与工具速查表",
+        "注意合规边界，只在授权环境操作"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "domestic-software",
+      "name": "全国高校国产软件应用与设计创新大赛",
+      "shortName": "国产软件大赛",
+      "organizer": "全国高等学校计算机教育研究会",
+      "officialUrl": "https://www.domisoft.cn/",
+      "officialUrlVerified": false,
+      "tier": "two-star",
+      "tierLabel": "两星",
+      "categories": [
+        "国产软件",
+        "信创",
+        "设计创新"
+      ],
+      "tags": [
+        "B类",
+        "信创方向",
+        "政策导向"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "围绕国产基础软件、工业软件与信创生态的应用开发与设计创新，考察在国产化技术栈上完成作品的能力。",
+      "knowledge": [
+        "国产操作系统（麒麟/统信）使用与适配",
+        "国产数据库（openGauss / 达梦）",
+        "国产 CPU 架构与编译适配",
+        "应用系统开发与迁移",
+        "信创项目文档规范"
+      ],
+      "preparation": [
+        "提前在国产 OS + 数据库环境完成部署演练",
+        "记录迁移适配中遇到的问题与解法",
+        "强调自主可控价值与技术难点",
+        "关注官方提供的软硬件资源支持"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "dnsfail"
+    },
+    {
+      "id": "computer-ability",
+      "name": "全国高校计算机能力挑战赛",
+      "shortName": "计算机能力挑战赛",
+      "organizer": "全国高等学校计算机教育研究会",
+      "officialUrl": "https://www.ncccu.org.cn/",
+      "officialUrlVerified": true,
+      "tier": "two-star",
+      "tierLabel": "两星",
+      "categories": [
+        "程序设计",
+        "办公应用",
+        "多赛道"
+      ],
+      "tags": [
+        "B类",
+        "门槛适中",
+        "区域赛"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "设程序设计、Office 应用、大数据、人工智能、嵌入式等多个赛项，分区域赛与全国总决赛，注重基础应用能力。",
+      "knowledge": [
+        "对应赛项的基础技术栈",
+        "C / C++ / Java / Python 之一",
+        "基础算法与调试",
+        "办公软件高级应用（Office 赛道）",
+        "限时答题节奏控制"
+      ],
+      "preparation": [
+        "选择与自己课程进度匹配的赛项",
+        "做历年真题熟悉题量与难度",
+        "基础题不失分是关键",
+        "区域赛晋级后针对性准备决赛"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "gcaa",
+      "name": "全球校园人工智能算法精英大赛",
+      "shortName": "GCAA",
+      "organizer": "江苏省人工智能学会、全球校园人工智能算法精英大赛组委会",
+      "officialUrl": "https://www.gcaa.org.cn/",
+      "officialUrlVerified": false,
+      "tier": "two-star",
+      "tierLabel": "两星",
+      "categories": [
+        "人工智能",
+        "算法竞赛",
+        "国际赛"
+      ],
+      "tags": [
+        "B类",
+        "AI 赛道多",
+        "国际参与"
+      ],
+      "targetAudience": "全球高校在校学生",
+      "content": "面向全球高校学生的 AI 算法竞赛，设 CV、NLP、推荐、智能控制等赛道，线上线下结合，按评测成绩与答辩综合评奖。",
+      "knowledge": [
+        "机器学习 / 深度学习",
+        "PyTorch 或 TensorFlow",
+        "计算机视觉或自然语言处理",
+        "模型压缩与部署",
+        "英文技术交流"
+      ],
+      "preparation": [
+        "选择算力可承受的赛道",
+        "复用成熟开源模型做微调，避免从零训练",
+        "做好实验记录与消融分析",
+        "答辩准备英文版简介"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "dnsfail"
+    },
+    {
+      "id": "h3c-cup",
+      "name": "新华三杯全国大学生数字技术大赛",
+      "shortName": "新华三杯",
+      "organizer": "新华三集团（H3C）",
+      "officialUrl": "https://www.h3c.com/cn/",
+      "officialUrlVerified": true,
+      "tier": "two-star",
+      "tierLabel": "两星",
+      "categories": [
+        "网络技术",
+        "云计算",
+        "企业赛"
+      ],
+      "tags": [
+        "B类",
+        "认证导向",
+        "省赛-国赛"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "分网络、云计算、大数据、安全等方向，先省赛后全国赛，理论笔试与实验操作结合，成绩优异者获认证与实习机会。",
+      "knowledge": [
+        "网络基础与 H3C 设备配置",
+        "云计算与虚拟化",
+        "网络安全基础",
+        "Linux 系统管理",
+        "实验命令熟练度"
+      ],
+      "preparation": [
+        "结合 H3C 认证教材系统复习",
+        "用模拟器反复练习配置实验",
+        "注意笔试与实验的权重分配",
+        "关注省赛时间，各省不同"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "jsjds",
+      "name": "中国大学生计算机设计大赛",
+      "shortName": "计算机设计大赛",
+      "organizer": "教育部高等学校计算机类专业教学指导委员会、中国大学生计算机设计大赛组织委员会",
+      "officialUrl": "https://www.jsjds.com.cn/",
+      "officialUrlVerified": true,
+      "tier": "two-star",
+      "tierLabel": "两星",
+      "categories": [
+        "设计创新",
+        "作品赛",
+        "多类别"
+      ],
+      "tags": [
+        "B类",
+        "参赛面广",
+        "分类评审"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "按软件应用与开发、数媒设计、人工智能应用、物联网应用等多个大类分组，提交作品后经省赛选拔进入国赛现场决赛。",
+      "knowledge": [
+        "所选大类的核心技术",
+        "作品设计与创意表达",
+        "交互与视觉呈现",
+        "作品文档与演示视频制作",
+        "现场答辩表达"
+      ],
+      "preparation": [
+        "仔细阅读大类与子类要求，避免报错赛道",
+        "作品必须原创，注意素材版权",
+        "演示视频控制在规定时长内",
+        "国赛现场需自备设备与备份"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "icpc",
+      "name": "ICPC 国际大学生程序设计竞赛",
+      "shortName": "ICPC",
+      "organizer": "ICPC Foundation（国际大学生程序设计竞赛基金会）",
+      "officialUrl": "https://icpc.global/",
+      "officialUrlVerified": true,
+      "tier": "international",
+      "tierLabel": "国际赛（不定星级）",
+      "categories": [
+        "程序设计",
+        "算法",
+        "国际赛"
+      ],
+      "tags": [
+        "国际顶级",
+        "ACM 赛制",
+        "三人一队"
+      ],
+      "targetAudience": "全球高校在校学生（三人一队）",
+      "content": "全球最具影响力的程序设计竞赛，三人一队共用一台电脑，5 小时解决 8-13 道算法题，按解题数与罚时排名，逐级为网络赛-区域赛-全球总决赛。",
+      "knowledge": [
+        "C++ 与 STL 熟练度",
+        "全谱系算法：DP、图论、计算几何、字符串、数论",
+        "数学推导与构造",
+        "团队策略与代码分工",
+        "高压环境下的 debug"
+      ],
+      "preparation": [
+        "长期训练：每周至少 2 场 5 小时团队模拟",
+        "沉淀个人负责模块的模板库",
+        "赛后必须补题并写题解",
+        "确定队内角色：主键盘手 / 数学 / 构造"
+      ],
+      "sources": [
+        "craii-2026"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok",
+      "notices": [
+        {
+          "title": "第49届ICPC世界总决赛圆满落幕，浙江大学王灿荣获ICPC终身教练奖",
+          "url": "https://icpc.pku.edu.cn/xwdt/582108be4265477587255d9865c7c415.htm",
+          "date": "2025-09-08",
+          "excerpt": "第49届ICPC世界总决赛圆满落幕，浙江大学王灿荣获ICPC终身教练奖",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://icpc.pku.edu.cn/xwdt/index.htm"
+        },
+        {
+          "title": "ICPC世界总决赛期间举办RCD全球研讨会 亚洲四所高校荣获首届突出贡献奖",
+          "url": "https://icpc.pku.edu.cn/xwdt/e07d16ebba3d4ca2aa2c5492c3ea9655.htm",
+          "date": "2025-09-03",
+          "excerpt": "ICPC世界总决赛期间举办RCD全球研讨会 亚洲四所高校荣获首届突出贡献奖",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://icpc.pku.edu.cn/xwdt/index.htm"
+        },
+        {
+          "title": "2021 ICPC Asia EC网络预选赛题目讲解视频回放及PPT下载",
+          "url": "https://icpc.pku.edu.cn/xwdt/1119_icpcbjzb_131514.htm",
+          "date": "2021-09-26",
+          "excerpt": "2021 ICPC Asia EC网络预选赛题目讲解视频回放及PPT下载",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "https://icpc.pku.edu.cn/xwdt/index.htm"
+        },
+        {
+          "title": "首页 简介 咨询委员会 赛事 公告 获奖名单 赞助商 相关链接 守正创新，引领未来 --> 首页 简介 咨询委员会 赛事 公告 获奖名单 赞助商 相关链接 新闻动态 简介 咨询委员会 赛事 公告 获奖名单 赞助商 相关链接 新闻动态 首页大图 新闻动态 新闻动态 凝聚教练力量，共促算法人才培养——2026 ICPC东亚区教练研讨会在北京大学顺利举办",
+          "url": "https://icpc.pku.edu.cn/index.htm",
+          "date": "2026-07-23",
+          "excerpt": "首页 简介 咨询委员会 赛事 公告 获奖名单 赞助商 相关链接 守正创新，引领未来 --> 首页 简介 咨询委员会 赛事 公告 获奖名单 赞助商 相关链接 新闻动态 简介 咨询委员会 赛事 公告 获奖名单 赞助商 相关链接 新闻动态 首页…",
+          "tags": [
+            "赛程",
+            "结果"
+          ],
+          "sourcePage": "https://icpc.pku.edu.cn/xwdt/index.htm"
+        },
+        {
+          "title": "第49届ICPC世界总决赛巴库启幕 北大罗国杰获组委会专项表彰",
+          "url": "https://icpc.pku.edu.cn/xwdt/ca79e08ea0a14a04bf07c1cdb223460f.htm",
+          "date": "2025-09-03",
+          "excerpt": "第49届ICPC世界总决赛巴库启幕 北大罗国杰获组委会专项表彰",
+          "tags": [
+            "赛程",
+            "结果"
+          ],
+          "sourcePage": "https://icpc.pku.edu.cn/xwdt/index.htm"
+        },
+        {
+          "title": "任正非与ICPC主席、教练及获奖选手座谈会纪要",
+          "url": "https://icpc.pku.edu.cn/xwdt/1119_icpcbjzb_162194.htm",
+          "date": "2024-10-31",
+          "excerpt": "任正非与ICPC主席、教练及获奖选手座谈会纪要",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "https://icpc.pku.edu.cn/xwdt/index.htm"
+        },
+        {
+          "title": "练秋湖畔贝壳图书馆漫谈",
+          "url": "https://icpc.pku.edu.cn/xwdt/6473778600f84cc5ab8507e2ebd9b02c.htm",
+          "date": "2025-12-05",
+          "excerpt": "练秋湖畔贝壳图书馆漫谈",
+          "tags": [],
+          "sourcePage": "https://icpc.pku.edu.cn/xwdt/index.htm"
+        },
+        {
+          "title": "2025 ICPC&华为-东莞训练营活动回顾",
+          "url": "https://icpc.pku.edu.cn/xwdt/27d177188563419983d3f10fbaf63373.htm",
+          "date": "2025-08-28",
+          "excerpt": "2025 ICPC&华为-东莞训练营活动回顾",
+          "tags": [],
+          "sourcePage": "https://icpc.pku.edu.cn/xwdt/index.htm"
+        }
+      ],
+      "noticesSource": "https://icpc.pku.edu.cn/xwdt/index.htm",
+      "noticesFetchedAt": "2026-09-21"
+    },
+    {
+      "id": "challenge-cup",
+      "name": "“挑战杯”全国大学生课外学术科技作品竞赛",
+      "shortName": "挑战杯",
+      "organizer": "共青团中央、中国科协、教育部、中国社会科学院、全国学联",
+      "officialUrl": "https://www.tiaozhanbei.net/",
+      "officialUrlVerified": true,
+      "tier": "four-star",
+      "tierLabel": "四星（综合榜）",
+      "categories": [
+        "综合赛事",
+        "学术科技",
+        "创新创业"
+      ],
+      "tags": [
+        "榜单顶级",
+        "含金量高",
+        "周期长"
+      ],
+      "targetAudience": "高校在校学生",
+      "content": "国内影响力最大的大学生综合性学术科技竞赛之一，分自然科学类学术论文、哲学社会科学类社会调查报告、科技发明制作三类，逐级为校赛-省赛-国赛。",
+      "knowledge": [
+        "科研方法与论文写作",
+        "项目工程实现",
+        "社会调研与数据分析",
+        "成果转化与专利",
+        "答辩与展板设计"
+      ],
+      "preparation": [
+        "至少提前一年启动，依托导师课题组",
+        "突出原创性与社会价值，避免纯工程堆砌",
+        "准备论文、专利、检测报告等佐证材料",
+        "校赛阶段就按国赛标准打磨"
+      ],
+      "sources": [
+        "cahe-ranking"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok",
+      "notices": [
+        {
+          "title": "挑战杯丨第十五届“挑战杯”中国大学生创业计划竞赛重庆市选拔赛决赛成功举办",
+          "url": "https://www.tiaozhanbei.net/article/15859/",
+          "date": "2026-07-08",
+          "excerpt": "挑战杯丨第十五届“挑战杯”中国大学生创业计划竞赛重庆市选拔赛决赛成功举办",
+          "tags": [
+            "赛程"
+          ]
+        },
+        {
+          "title": "挑战杯丨第十五届“挑战杯”山西省大学生创业计划竞赛成功举办",
+          "url": "https://www.tiaozhanbei.net/article/15856/",
+          "date": "2026-06-30",
+          "excerpt": "挑战杯丨第十五届“挑战杯”山西省大学生创业计划竞赛成功举办",
+          "tags": [
+            "赛程"
+          ]
+        },
+        {
+          "title": "挑战杯丨第十五届“挑战杯”黑龙江省大学生创业计划竞赛终审决赛在东北林业大学举行",
+          "url": "https://www.tiaozhanbei.net/article/15846/",
+          "date": "2026-06-19",
+          "excerpt": "挑战杯丨第十五届“挑战杯”黑龙江省大学生创业计划竞赛终审决赛在东北林业大学举行",
+          "tags": [
+            "赛程"
+          ],
+          "keyDates": {
+            "venue": "东北林业大学"
+          }
+        },
+        {
+          "title": "挑战杯丨第十五届“挑战杯”中国大学生创业计划竞赛培训交流（河北站）顺利举办",
+          "url": "https://www.tiaozhanbei.net/article/15839/",
+          "date": "2026-05-13",
+          "excerpt": "挑战杯丨第十五届“挑战杯”中国大学生创业计划竞赛培训交流（河北站）顺利举办",
+          "tags": [
+            "赛程"
+          ]
+        },
+        {
+          "title": "挑战杯丨第十五届“挑战杯”中国大学生创业计划竞赛培训交流（云南站）顺利举办",
+          "url": "https://www.tiaozhanbei.net/article/15838/",
+          "date": "2026-04-28",
+          "excerpt": "挑战杯丨第十五届“挑战杯”中国大学生创业计划竞赛培训交流（云南站）顺利举办",
+          "tags": [
+            "赛程"
+          ]
+        },
+        {
+          "title": "挑战杯丨第十五届“挑战杯”中国大学生创业计划竞赛培训交流（上海站）顺利举办",
+          "url": "https://www.tiaozhanbei.net/article/15831/",
+          "date": "2026-04-20",
+          "excerpt": "挑战杯丨第十五届“挑战杯”中国大学生创业计划竞赛培训交流（上海站）顺利举办",
+          "tags": [
+            "赛程"
+          ]
+        },
+        {
+          "title": "DAY1丨第十九届“挑战杯”竞赛终审决赛，开赛！",
+          "url": "https://www.tiaozhanbei.net/article/15811/",
+          "date": "2025-11-03",
+          "excerpt": "DAY1丨第十九届“挑战杯”竞赛终审决赛，开赛！",
+          "tags": [
+            "赛程"
+          ]
+        },
+        {
+          "title": "2025年度中国青年科技创新“揭榜挂帅”擂台赛人工智能领域主擂台赛顺利举办",
+          "url": "https://www.tiaozhanbei.net/article/15805/",
+          "date": "2025-10-23",
+          "excerpt": "2025年度中国青年科技创新“揭榜挂帅”擂台赛人工智能领域主擂台赛顺利举办",
+          "tags": [
+            "赛程"
+          ]
+        }
+      ],
+      "noticesSource": "https://www.tiaozhanbei.net/tzb",
+      "noticesFetchedAt": "2026-09-21",
+      "keyDates": {
+        "venue": "东北林业大学"
+      },
+      "keyDatesFrom": {
+        "title": "挑战杯丨第十五届“挑战杯”黑龙江省大学生创业计划竞赛终审决赛在东北林业大学举行",
+        "url": "https://www.tiaozhanbei.net/article/15846/"
+      }
+    },
+    {
+      "id": "internet-plus",
+      "name": "中国国际大学生创新大赛（原“互联网+”大学生创新创业大赛）",
+      "shortName": "互联网+ / 国创赛",
+      "organizer": "教育部等十二部委",
+      "officialUrl": "https://cy.ncss.cn/",
+      "officialUrlVerified": true,
+      "tier": "four-star",
+      "tierLabel": "四星（综合榜）",
+      "categories": [
+        "创新创业",
+        "综合赛事",
+        "商业计划"
+      ],
+      "tags": [
+        "榜单顶级",
+        "覆盖面最广",
+        "含金量高"
+      ],
+      "targetAudience": "高校在校学生及毕业 5 年内校友",
+      "content": "全球规模最大的大学生创新创业赛事，设高教主赛道、青年红色筑梦之旅赛道、职教赛道与产业命题赛道，逐级为校赛-省赛-国赛。",
+      "knowledge": [
+        "商业模式与财务测算",
+        "产品与技术可行性论证",
+        "市场调研与竞品分析",
+        "路演与投资问答",
+        "团队股权与法务常识"
+      ],
+      "preparation": [
+        "尽早确定赛道，产业命题赛道需对接企业",
+        "准备 BP、演示视频、财务模型三件套",
+        "用真实数据证明增长，避免空谈愿景",
+        "反复模拟投资人质询"
+      ],
+      "sources": [
+        "cahe-ranking"
+      ],
+      "lastChecked": "2026-09-20",
+      "lastCheckStatus": "ok"
+    },
+    {
+      "id": "fltrp",
+      "name": "“外研社·国才杯”“理解当代中国”全国大学生外语能力大赛",
+      "shortName": "外研社·国才杯",
+      "organizer": "外语教学与研究出版社、教育部高等学校外国语言文学类专业教学指导委员会",
+      "officialUrl": "https://uchallenge.unipus.cn/",
+      "officialUrlVerified": true,
+      "tier": "other-domain",
+      "tierLabel": "跨领域补充",
+      "categories": [
+        "英语",
+        "外语能力",
+        "演讲/写作/阅读"
+      ],
+      "tags": [
+        "学科竞赛榜单",
+        "英语类",
+        "多赛项"
+      ],
+      "targetAudience": "全国高校在校学生（分英语专业组与非英语专业组）",
+      "content": "含英语演讲、写作、阅读、笔译、口译等赛项，按校赛—省赛—国赛三级选拔，是全国影响力最大的英语类学科竞赛之一。近年主题为“理解当代中国”，强调用外语讲好中国故事。",
+      "knowledge": [
+        "英语听说读写综合能力",
+        "公开演讲与即兴表达",
+        "议论文写作与逻辑论证",
+        "跨文化理解与国情知识",
+        "临场应变与心理素质"
+      ],
+      "preparation": [
+        "按赛项分别准备：演讲练即兴与定题，写作练限时议论文",
+        "研读往年真题与优秀作品，建立素材库",
+        "演讲需反复录像复盘语音语调与仪态",
+        "关注“理解当代中国”主题相关表述与术语英译"
+      ],
+      "sources": [
+        "cross-domain"
+      ],
+      "note": "跨领域补充：不在计算机类竞赛指数覆盖范围内。官网资讯更新较慢，实测最新资讯停在 2023 年。",
+      "notices": [
+        {
+          "title": "风鹏正举 鹤舞九天——2022“外研社·国才杯”全国英语演讲、写作、阅读大赛全国决赛圆满闭幕 2022/12/11",
+          "url": "https://uchallenge.unipus.cn/c/2022-12-11/515642.shtml",
+          "date": "2022-12-11",
+          "excerpt": "风鹏正举 鹤舞九天——2022“外研社·国才杯”全国英语演讲、写作、阅读大赛全国决赛圆满闭幕 2022/12/11",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://uchallenge.unipus.cn/2021/news/"
+        },
+        {
+          "title": "韬涵万象，挥斥方遒 ——2022“外研社·国才杯”全国英语写作、阅读大赛全国决赛成功举办 2022/12/10",
+          "url": "https://uchallenge.unipus.cn/c/2022-12-10/515792.shtml",
+          "date": "2022-12-10",
+          "excerpt": "韬涵万象，挥斥方遒 ——2022“外研社·国才杯”全国英语写作、阅读大赛全国决赛成功举办 2022/12/10",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://uchallenge.unipus.cn/2021/news/",
+          "keyDates": {
+            "eventDate": "2022-12-11"
+          }
+        },
+        {
+          "title": "怀家国天下，育时代英才 ——2022“外研社·国才杯”全国英语演讲、写作、阅读大赛全国决赛开幕 2022/12/08",
+          "url": "https://uchallenge.unipus.cn/c/2022-12-08/515559.shtml",
+          "date": "2022-12-08",
+          "excerpt": "怀家国天下，育时代英才 ——2022“外研社·国才杯”全国英语演讲、写作、阅读大赛全国决赛开幕 2022/12/08",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://uchallenge.unipus.cn/2021/news/"
+        },
+        {
+          "title": "2022“外研社·国才杯”全国英语演讲大赛福建赛区决赛成功举办 2022/11/17",
+          "url": "https://uchallenge.unipus.cn/c/2022-11-17/515209.shtml",
+          "date": "2022-11-17",
+          "excerpt": "2022“外研社·国才杯”全国英语演讲大赛福建赛区决赛成功举办 2022/11/17",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://uchallenge.unipus.cn/2021/news/"
+        },
+        {
+          "title": "2022年辽宁省普通高等学校大学英语挑战赛辽宁省分赛区决赛成功举办！ 2022/11/16",
+          "url": "https://uchallenge.unipus.cn/c/2022-11-16/515181.shtml",
+          "date": "2022-11-16",
+          "excerpt": "2022年辽宁省普通高等学校大学英语挑战赛辽宁省分赛区决赛成功举办！ 2022/11/16",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://uchallenge.unipus.cn/2021/news/"
+        },
+        {
+          "title": "巅峰对决！2022“外研社·国才杯”全国英语演讲大赛冠军争夺战赛题发布！ 2022/12/10",
+          "url": "https://uchallenge.unipus.cn/c/2022-12-10/516192.shtml",
+          "date": "2022-12-10",
+          "excerpt": "巅峰对决！2022“外研社·国才杯”全国英语演讲大赛冠军争夺战赛题发布！ 2022/12/10",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "https://uchallenge.unipus.cn/2021/news/"
+        },
+        {
+          "title": "2022“外研社·国才杯”全国英语演讲大赛第三阶段赛题公布！ 2022/12/10",
+          "url": "https://uchallenge.unipus.cn/c/2022-12-10/515816.shtml",
+          "date": "2022-12-10",
+          "excerpt": "2022“外研社·国才杯”全国英语演讲大赛第三阶段赛题公布！ 2022/12/10",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "https://uchallenge.unipus.cn/2021/news/"
+        },
+        {
+          "title": "9席名单出炉！2022“外研社·国才杯”全国英语演讲大赛冠军争夺战一触即发 2022/12/10",
+          "url": "https://uchallenge.unipus.cn/c/2022-12-10/515821.shtml",
+          "date": "2022-12-10",
+          "excerpt": "9席名单出炉！2022“外研社·国才杯”全国英语演讲大赛冠军争夺战一触即发 2022/12/10",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "https://uchallenge.unipus.cn/2021/news/"
+        }
+      ],
+      "noticesSource": "https://uchallenge.unipus.cn/2021/news/",
+      "noticesFetchedAt": "2026-09-21",
+      "keyDates": {
+        "eventDate": "2022-12-11"
+      },
+      "keyDatesFrom": {
+        "title": "韬涵万象，挥斥方遒 ——2022“外研社·国才杯”全国英语写作、阅读大赛全国决赛成功举办 2022/12/10",
+        "url": "https://uchallenge.unipus.cn/c/2022-12-10/515792.shtml"
+      }
+    },
+    {
+      "id": "apmcm",
+      "name": "APMCM 亚太地区大学生数学建模竞赛",
+      "shortName": "APMCM 亚太赛",
+      "organizer": "亚太地区大学生数学建模竞赛组委会",
+      "officialUrl": "https://www.apmcm.org/",
+      "officialUrlVerified": true,
+      "tier": "other-domain",
+      "tierLabel": "跨领域补充",
+      "categories": [
+        "数学建模",
+        "国际区域赛",
+        "论文赛"
+      ],
+      "tags": [
+        "数学类",
+        "国际赛事",
+        "三人一队"
+      ],
+      "targetAudience": "亚太地区高校在校学生（本科、专科、研究生均可）",
+      "content": "三人一队，在连续数日内就同一实际问题建立数学模型、编程求解并撰写英文论文。设中文赛项与英文赛项，分赛题评奖，优秀队伍获创新奖等专项奖。",
+      "knowledge": [
+        "数学建模方法与常见模型（优化、微分方程、统计）",
+        "Python / MATLAB 编程与数值计算",
+        "LaTeX 英文论文写作",
+        "数据处理与结果可视化",
+        "团队分工与时间管理"
+      ],
+      "preparation": [
+        "赛前完成 2-3 次完整模拟（严格计时，产出完整论文）",
+        "建立模板库：LaTeX 模板、常用模型代码、图表样式",
+        "固定分工：建模 / 编程 / 写作，但要能互相补位",
+        "英文赛项需提前熟悉英文摘要与论文表达套路"
+      ],
+      "sources": [
+        "cross-domain"
+      ],
+      "note": "跨领域补充：数学类赛事，为学生提供计算机之外的赛道参考。",
+      "notices": [
+        {
+          "title": "2026年第十六届APMCM亚太地区大学生数学建模竞赛报名通知",
+          "url": "https://www.apmcm.org/detail/2512",
+          "date": "2026-09-15",
+          "excerpt": "2026年第十六届APMCM亚太地区大学生数学建模竞赛报名通知",
+          "tags": [
+            "报名"
+          ],
+          "sourcePage": "https://www.apmcm.org/list/information"
+        },
+        {
+          "title": "【报名通知】2026年第十六届APMCM亚太地区大学生数学建模竞赛（中文赛项）",
+          "url": "https://www.apmcm.org/detail/2508",
+          "date": "2026-05-28",
+          "excerpt": "【报名通知】2026年第十六届APMCM亚太地区大学生数学建模竞赛（中文赛项）",
+          "tags": [
+            "报名"
+          ],
+          "sourcePage": "https://www.apmcm.org/list/information"
+        },
+        {
+          "title": "【报名通知中文版】2025年第十五届APMCM亚太地区大学生数学建模竞赛",
+          "url": "https://www.apmcm.org/detail/2493",
+          "date": "2025-10-10",
+          "excerpt": "【报名通知中文版】2025年第十五届APMCM亚太地区大学生数学建模竞赛",
+          "tags": [
+            "报名"
+          ],
+          "sourcePage": "https://www.apmcm.org/list/information",
+          "keyDates": {
+            "registration": "2025-11-19",
+            "eventDate": "4天，参赛对象为普通高校全日制在校大学生，参赛队由1-3名大学生组成"
+          }
+        },
+        {
+          "title": "2024年第十四届APMCM亚太地区大学生数学建模竞赛报名流程",
+          "url": "https://www.apmcm.org/detail/2486",
+          "date": "2024-10-29",
+          "excerpt": "2024年第十四届APMCM亚太地区大学生数学建模竞赛报名流程",
+          "tags": [
+            "报名"
+          ],
+          "sourcePage": "https://www.apmcm.org/list/information"
+        },
+        {
+          "title": "【获奖名单公示】2026年第十六届APMCM亚太地区大学生数学建模竞赛（中文赛项）",
+          "url": "https://www.apmcm.org/detail/2511",
+          "date": "2026-07-25",
+          "excerpt": "【获奖名单公示】2026年第十六届APMCM亚太地区大学生数学建模竞赛（中文赛项）",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "https://www.apmcm.org/list/prize"
+        },
+        {
+          "title": "2025年第十五届亚太地区大学生数学建模竞赛（APMCM）最佳编程奖、最佳排版奖、最佳新媒体奖获奖名单公布",
+          "url": "https://www.apmcm.org/detail/2503",
+          "date": "2026-03-03",
+          "excerpt": "2025年第十五届亚太地区大学生数学建模竞赛（APMCM）最佳编程奖、最佳排版奖、最佳新媒体奖获奖名单公布",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "https://www.apmcm.org/list/information"
+        },
+        {
+          "title": "2025年亚太地区大学生数学建模获奖名单公布",
+          "url": "https://www.apmcm.org/detail/2501",
+          "date": "2026-01-23",
+          "excerpt": "2025年亚太地区大学生数学建模获奖名单公布",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "https://www.apmcm.org/list/prize"
+        },
+        {
+          "title": "2025年亚太地区大学生数学建模竞赛成绩初稿公示",
+          "url": "https://www.apmcm.org/detail/2500",
+          "date": "2026-01-06",
+          "excerpt": "2025年亚太地区大学生数学建模竞赛成绩初稿公示",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "https://www.apmcm.org/list/prize"
+        }
+      ],
+      "noticesSource": "https://www.apmcm.org/list/information",
+      "noticesFetchedAt": "2026-09-21",
+      "keyDates": {
+        "registration": "2025-11-19",
+        "eventDate": "4天，参赛对象为普通高校全日制在校大学生，参赛队由1-3名大学生组成"
+      },
+      "keyDatesFrom": {
+        "title": "【报名通知中文版】2025年第十五届APMCM亚太地区大学生数学建模竞赛",
+        "url": "https://www.apmcm.org/detail/2493"
+      }
+    },
+    {
+      "id": "mcm",
+      "name": "全国大学生数学建模竞赛（CUMCM）",
+      "shortName": "国赛数模",
+      "organizer": "中国工业与应用数学学会（CSIAM）",
+      "officialUrl": "https://www.mcm.edu.cn/",
+      "officialUrlVerified": true,
+      "tier": "other-domain",
+      "tierLabel": "跨领域补充",
+      "categories": [
+        "数学建模",
+        "国内顶级",
+        "论文赛"
+      ],
+      "tags": [
+        "数学类",
+        "规模最大",
+        "含金量高"
+      ],
+      "targetAudience": "全国高校在校本科生、专科生（分本科组与高职高专组）",
+      "content": "创办于 1992 年，是世界上规模最大的数学建模竞赛。三人一队，在连续三日内完成建模、求解与论文写作。2026 年有来自多国 1962 所院校、89516 支队伍、26 万多人报名参赛。",
+      "knowledge": [
+        "数学建模与算法设计",
+        "Python / MATLAB / SPSS 等工具",
+        "统计分析与预测方法",
+        "科技论文写作与排版",
+        "团队协作与极限时间管理"
+      ],
+      "preparation": [
+        "至少提前半年组队并系统训练（每周一次模拟）",
+        "精读历年国赛优秀论文，总结题型套路",
+        "分工明确：建模手、编程手、写作手",
+        "赛前准备好模板、代码库与查重注意事项"
+      ],
+      "sources": [
+        "cross-domain"
+      ],
+      "note": "跨领域补充：国内规模最大的数学类竞赛，常与计算机能力形成互补。官网栏目页为 JS 空壳，仅首页通知可静态抓取。",
+      "notices": [
+        {
+          "title": "2026年全国大学生数学建模竞赛培训与应用研究研讨会成功举行",
+          "url": "https://www.mcm.edu.cn/html_cn/node/0e05b857c0474518ad1d112d36edc486.html",
+          "date": null,
+          "excerpt": "2026年全国大学生数学建模竞赛培训与应用研究研讨会成功举行",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://www.mcm.edu.cn/"
+        },
+        {
+          "title": "2026年全国大学生数学建模竞赛赛题讲评与经验交流会通知",
+          "url": "https://www.mcm.edu.cn/html_cn/node/74ca2bd675a8399782a41dffa15f0910.html",
+          "date": null,
+          "excerpt": "2026年全国大学生数学建模竞赛赛题讲评与经验交流会通知",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "https://www.mcm.edu.cn/"
+        },
+        {
+          "title": "2026年高教社杯全国大学生数学建模竞赛赛题",
+          "url": "https://www.mcm.edu.cn/html_cn/node/27b6e148f8113f09b0269f64a02629fb.html",
+          "date": null,
+          "excerpt": "2026年高教社杯全国大学生数学建模竞赛赛题",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "https://www.mcm.edu.cn/"
+        },
+        {
+          "title": "关于批准2025—2026年全国大学生数学建模赛题后续研究课题的通告",
+          "url": "https://www.mcm.edu.cn/html_cn/node/a423b01e1f2ed1a38e9741fc7703ee61.html",
+          "date": null,
+          "excerpt": "关于批准2025—2026年全国大学生数学建模赛题后续研究课题的通告",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "https://www.mcm.edu.cn/"
+        },
+        {
+          "title": "致敬萧树铁先生",
+          "url": "https://www.mcm.edu.cn/html_cn/node/4070e6e850933a30f296992bd8af7459.html",
+          "date": null,
+          "excerpt": "致敬萧树铁先生",
+          "tags": [],
+          "sourcePage": "https://www.mcm.edu.cn/"
+        },
+        {
+          "title": "竞赛30周年视频",
+          "url": "https://www.mcm.edu.cn/html_cn/node/56839f97c847c3ab2646b42819446621.html",
+          "date": null,
+          "excerpt": "竞赛30周年视频",
+          "tags": [],
+          "sourcePage": "https://www.mcm.edu.cn/"
+        },
+        {
+          "title": "全国大学生数学建模竞赛人工智能工具使用规定 （2026年试行）",
+          "url": "https://www.mcm.edu.cn/html_cn/node/fef94648f2836ab6cc81586f4c38512b.html",
+          "date": null,
+          "excerpt": "全国大学生数学建模竞赛人工智能工具使用规定 （2026年试行）",
+          "tags": [],
+          "sourcePage": "https://www.mcm.edu.cn/"
+        },
+        {
+          "title": "2026年全国大学生数学建模竞赛培训与应用研究研讨会第二次通知",
+          "url": "https://www.mcm.edu.cn/html_cn/node/3703fb7f6e16f999f45aac0593b1e1ff.html",
+          "date": null,
+          "excerpt": "2026年全国大学生数学建模竞赛培训与应用研究研讨会第二次通知",
+          "tags": [],
+          "sourcePage": "https://www.mcm.edu.cn/"
+        }
+      ],
+      "noticesSource": "https://www.mcm.edu.cn/",
+      "noticesFetchedAt": "2026-09-21"
+    },
+    {
+      "id": "robomaster",
+      "name": "RoboMaster 机甲大师高校系列赛",
+      "shortName": "RoboMaster",
+      "organizer": "大疆创新（DJI）",
+      "officialUrl": "https://www.robomaster.com/zh-CN",
+      "officialUrlVerified": true,
+      "tier": "other-domain",
+      "tierLabel": "跨领域补充",
+      "categories": [
+        "机器人",
+        "嵌入式",
+        "工程实践"
+      ],
+      "tags": [
+        "机器人",
+        "软硬结合",
+        "团队作战"
+      ],
+      "targetAudience": "全球高校在校学生（以学校战队为单位）",
+      "content": "以战队为单位研发地面与空中机器人进行对抗，涵盖机械设计、嵌入式控制、视觉算法、电控与算法决策等方向，赛季制、含区域赛与全国赛，并设人工智能挑战赛等分项。",
+      "knowledge": [
+        "嵌入式开发（STM32 / RTOS / CAN 总线）",
+        "计算机视觉与目标跟踪（OpenCV）",
+        "自动控制与 PID 调参",
+        "机械设计与三维建模",
+        "团队工程管理与迭代开发"
+      ],
+      "preparation": [
+        "尽早组建跨专业战队（机械 / 电控 / 视觉 / 算法）",
+        "从往届开源资料与规则手册入手，明确技术指标",
+        "暑期是关键研发期，需制定里程碑与联调计划",
+        "重视工程规范：版本管理、测试记录、备件管理"
+      ],
+      "sources": [
+        "cross-domain"
+      ],
+      "note": "跨领域补充：机器人与嵌入式方向，工程实践强度高。",
+      "notices": [
+        {
+          "title": "关于 RoboMaster 2026 超级对抗赛·区域赛（南部赛区）赛事引擎异常情况的说明",
+          "url": "https://www.robomaster.com/zh-CN/resource/pages/announcement/1918",
+          "date": "2026-05-18",
+          "excerpt": "关于 RoboMaster 2026 超级对抗赛·区域赛（南部赛区）赛事引擎异常情况的说明",
+          "tags": [
+            "赛程",
+            "规则"
+          ],
+          "sourcePage": "https://www.robomaster.com/zh-CN/resource/announcement"
+        },
+        {
+          "title": "大疆赞助权益说明及申请公告（方程式 2026）",
+          "url": "https://www.robomaster.com/zh-CN/resource/pages/announcement/1928",
+          "date": "2026-09-18",
+          "excerpt": "大疆赞助权益说明及申请公告（方程式 2026）",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "https://www.robomaster.com/zh-CN/resource/announcement"
+        },
+        {
+          "title": "关于 RoboMaster 2026机甲大师超级对抗赛弹丸管控的说明",
+          "url": "https://www.robomaster.com/zh-CN/resource/pages/announcement/1917",
+          "date": "2026-05-08",
+          "excerpt": "关于 RoboMaster 2026机甲大师超级对抗赛弹丸管控的说明",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "https://www.robomaster.com/zh-CN/resource/announcement"
+        },
+        {
+          "title": "大疆赞助权益说明及申请公告（RoboMaster 2026）",
+          "url": "https://www.robomaster.com/zh-CN/resource/pages/announcement/1889",
+          "date": "2025-10-29",
+          "excerpt": "大疆赞助权益说明及申请公告（RoboMaster 2026）",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "https://www.robomaster.com/zh-CN/resource/announcement"
+        },
+        {
+          "title": "RoboMaster 2026机甲大师高校系列赛物资购买说明",
+          "url": "https://www.robomaster.com/zh-CN/resource/pages/announcement/1879",
+          "date": "2025-10-21",
+          "excerpt": "RoboMaster 2026机甲大师高校系列赛物资购买说明",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "https://www.robomaster.com/zh-CN/resource/announcement"
+        },
+        {
+          "title": "RoboMaster 2026机甲大师高校系列赛综合类奖项获奖名单",
+          "url": "https://www.robomaster.com/zh-CN/resource/pages/announcement/1927",
+          "date": "2026-09-09",
+          "excerpt": "RoboMaster 2026机甲大师高校系列赛综合类奖项获奖名单",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "https://www.robomaster.com/zh-CN/resource/announcement"
+        },
+        {
+          "title": "RoboMaster 2026 机甲大师超级对抗赛全国赛获奖名单",
+          "url": "https://www.robomaster.com/zh-CN/resource/pages/announcement/1925",
+          "date": "2026-08-12",
+          "excerpt": "RoboMaster 2026 机甲大师超级对抗赛全国赛获奖名单",
+          "tags": [
+            "赛程",
+            "结果"
+          ],
+          "sourcePage": "https://www.robomaster.com/zh-CN/resource/announcement"
+        },
+        {
+          "title": "RoboMaster 2026机甲大师高校人工智能挑战赛获奖名单",
+          "url": "https://www.robomaster.com/zh-CN/resource/pages/announcement/1924",
+          "date": "2026-08-07",
+          "excerpt": "RoboMaster 2026机甲大师高校人工智能挑战赛获奖名单",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "https://www.robomaster.com/zh-CN/resource/announcement"
+        }
+      ],
+      "noticesSource": "https://www.robomaster.com/zh-CN/resource/announcement",
+      "noticesFetchedAt": "2026-09-21"
+    }
+  ]
+}
