@@ -29,6 +29,15 @@
         "url": "https://www.moe.gov.cn/",
         "coverage": "英语、数学、机器人等非计算机类学科竞赛",
         "note": "这些赛事不在《普通高校大学生计算机类竞赛指数（2026版）》覆盖的 31 项之内，作为跨领域补充收录，其价值等级统一标记为“跨领域补充”，不代表官方星级。"
+      },
+      {
+        "id": "moe-84",
+        "name": "教育部认可的 84 项全国大学生学科竞赛名单",
+        "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组",
+        "publishedAt": "2024-03-22",
+        "url": "https://www3.xzmu.edu.cn/jwc/getcontent?id=101858&url=show",
+        "coverage": "84 项赛事（《2023 全国普通高校大学生竞赛分析报告》竞赛清单）",
+        "note": "国内高校最通用的竞赛认可口径；officialUrl 取自该名单公布的官方报名网址。"
       }
     ],
     "tierScale": [
@@ -57,6 +66,12 @@
         "value": "international",
         "label": "国际赛（不定星级）",
         "weight": 5
+      },
+      {
+        "value": "whitelist",
+        "label": "白名单",
+        "weight": 4,
+        "note": "教育部认可 84 项竞赛名单；具体星级以各校认定文件为准"
       }
     ],
     "fieldNotes": {
@@ -84,13 +99,13 @@
       "note": "由 scripts/crawl-competitions.mjs 自动生成；officialUrlVerified 表示官网在当前网络环境下可达"
     },
     "lastDetailCrawl": {
-      "ranAt": "2026-09-21T12:06:33.309Z",
+      "ranAt": "2026-09-21T13:12:43.953Z",
       "sites": [
         {
           "id": "cnsoftbei",
           "ok": true,
           "entries": 8,
-          "withDates": 0,
+          "withDates": 1,
           "error": null
         },
         {
@@ -155,11 +170,54 @@
           "entries": 8,
           "withDates": 1,
           "error": null
+        },
+        {
+          "id": "china-cssc",
+          "ok": true,
+          "entries": 8,
+          "withDates": 0,
+          "error": null
+        },
+        {
+          "id": "cteic",
+          "ok": true,
+          "entries": 7,
+          "withDates": 1,
+          "error": null
+        },
+        {
+          "id": "jienengjianpai",
+          "ok": true,
+          "entries": 8,
+          "withDates": 0,
+          "error": null
+        },
+        {
+          "id": "ciciec",
+          "ok": true,
+          "entries": 6,
+          "withDates": 3,
+          "error": null
+        },
+        {
+          "id": "mit-caai",
+          "ok": true,
+          "entries": 5,
+          "withDates": 0,
+          "error": null
         }
       ],
-      "totalEntries": 75,
-      "totalWithDates": 9,
+      "totalEntries": 109,
+      "totalWithDates": 14,
       "note": "仅覆盖服务端渲染的重点赛事站点；其余站点为 JS 空壳，静态抓取无法获取内容"
+    },
+    "whitelistCoverage": {
+      "source": "moe-84",
+      "total": 84,
+      "linkedToExisting": 17,
+      "newlyAdded": 67,
+      "totalCompetitions": 104,
+      "note": "linkedToExisting 表示白名单竞赛已在库中（含人工整理内容）；newlyAdded 为本次批量补录。"
     }
   },
   "competitions": [
@@ -264,7 +322,10 @@
           "tags": [
             "赛程"
           ],
-          "sourcePage": "https://www.cnsoftbei.com/list-1-1.html"
+          "sourcePage": "https://www.cnsoftbei.com/list-1-1.html",
+          "keyDates": {
+            "eventDate": "2026-07-29"
+          }
         },
         {
           "title": "关于举办第十五届“中国软件杯”大学生软件设计大赛的通知",
@@ -288,7 +349,16 @@
         }
       ],
       "noticesSource": "https://www.cnsoftbei.com/list-1-1.html",
-      "noticesFetchedAt": "2026-09-21"
+      "noticesFetchedAt": "2026-09-21",
+      "whitelistNo": 38,
+      "whitelistUrl": "http://www.cnsoftbei.com/",
+      "keyDates": {
+        "eventDate": "2026-07-29"
+      },
+      "keyDatesFrom": {
+        "title": "第十五届“中国软件杯”大学生软件设计大赛决赛挑战赛方案",
+        "url": "https://www.cnsoftbei.com/content-1-1353-1.html"
+      }
     },
     {
       "id": "ccpc-bigdata",
@@ -449,7 +519,9 @@
       ],
       "lastChecked": "2026-09-21",
       "lastCheckStatus": "ok",
-      "redirectedTo": "http://r.huaweistatic.com/s/hwtalent/lst/ict-academy/"
+      "redirectedTo": "http://r.huaweistatic.com/s/hwtalent/lst/ict-academy/",
+      "whitelistNo": 42,
+      "whitelistUrl": "https://e.huawei.com/cn/talent/ict-academy"
     },
     {
       "id": "iot-design",
@@ -489,7 +561,9 @@
         "craii-2026"
       ],
       "lastChecked": "2026-09-21",
-      "lastCheckStatus": "ok"
+      "lastCheckStatus": "ok",
+      "whitelistNo": 65,
+      "whitelistUrl": "https://iot.sjtu.edu.cn/"
     },
     {
       "id": "fwwb",
@@ -607,7 +681,9 @@
         }
       ],
       "noticesSource": "https://www.fwwb.org.cn/",
-      "noticesFetchedAt": "2026-09-21"
+      "noticesFetchedAt": "2026-09-21",
+      "whitelistNo": 24,
+      "whitelistUrl": "http://www.fwwb.org.cn/"
     },
     {
       "id": "ccpc-ai",
@@ -920,7 +996,9 @@
         "craii-2026"
       ],
       "lastChecked": "2026-09-21",
-      "lastCheckStatus": "ok"
+      "lastCheckStatus": "ok",
+      "whitelistNo": 63,
+      "whitelistUrl": "https://compiler.educg.net/"
     },
     {
       "id": "software-innovation",
@@ -1000,7 +1078,9 @@
         "craii-2026"
       ],
       "lastChecked": "2026-09-21",
-      "lastCheckStatus": "certissue"
+      "lastCheckStatus": "certissue",
+      "whitelistNo": 33,
+      "whitelistUrl": "http://www.ciscn.cn/"
     },
     {
       "id": "ccpc-embedded",
@@ -1309,7 +1389,9 @@
         "craii-2026"
       ],
       "lastChecked": "2026-09-21",
-      "lastCheckStatus": "ok"
+      "lastCheckStatus": "ok",
+      "whitelistNo": 58,
+      "whitelistUrl": "https://star.baidu.com/"
     },
     {
       "id": "matedata-cup",
@@ -1347,7 +1429,9 @@
       ],
       "sources": [
         "craii-2026"
-      ]
+      ],
+      "whitelistNo": 84,
+      "whitelistUrl": "https://matiji.net/"
     },
     {
       "id": "digital-literacy",
@@ -1465,7 +1549,9 @@
         "craii-2026"
       ],
       "lastChecked": "2026-09-21",
-      "lastCheckStatus": "ok"
+      "lastCheckStatus": "ok",
+      "whitelistNo": 66,
+      "whitelistUrl": "http://www.isclab.org.cn/"
     },
     {
       "id": "domestic-software",
@@ -1585,7 +1671,9 @@
         "craii-2026"
       ],
       "lastChecked": "2026-09-21",
-      "lastCheckStatus": "dnsfail"
+      "lastCheckStatus": "dnsfail",
+      "whitelistNo": 76,
+      "whitelistUrl": "https://www.gcaa.org.cn/"
     },
     {
       "id": "h3c-cup",
@@ -1665,7 +1753,9 @@
         "craii-2026"
       ],
       "lastChecked": "2026-09-21",
-      "lastCheckStatus": "ok"
+      "lastCheckStatus": "ok",
+      "whitelistNo": 25,
+      "whitelistUrl": "http://jsjds.blcu.edu.cn/"
     },
     {
       "id": "icpc",
@@ -1787,7 +1877,9 @@
         }
       ],
       "noticesSource": "https://icpc.pku.edu.cn/xwdt/index.htm",
-      "noticesFetchedAt": "2026-09-21"
+      "noticesFetchedAt": "2026-09-21",
+      "whitelistNo": 4,
+      "whitelistUrl": "https://icpc.global/"
     },
     {
       "id": "challenge-cup",
@@ -1913,7 +2005,9 @@
       "keyDatesFrom": {
         "title": "挑战杯丨第十五届“挑战杯”黑龙江省大学生创业计划竞赛终审决赛在东北林业大学举行",
         "url": "https://www.tiaozhanbei.net/article/15846/"
-      }
+      },
+      "whitelistNo": 2,
+      "whitelistUrl": "http://www.tiaozhanbei.net/"
     },
     {
       "id": "internet-plus",
@@ -1953,7 +2047,9 @@
         "cahe-ranking"
       ],
       "lastChecked": "2026-09-21",
-      "lastCheckStatus": "ok"
+      "lastCheckStatus": "ok",
+      "whitelistNo": 1,
+      "whitelistUrl": "https://cy.ncss.cn/"
     },
     {
       "id": "fltrp",
@@ -2088,7 +2184,9 @@
         "url": "https://uchallenge.unipus.cn/c/2022-12-10/515792.shtml"
       },
       "lastChecked": "2026-09-21",
-      "lastCheckStatus": "ok"
+      "lastCheckStatus": "ok",
+      "whitelistNo": 15,
+      "whitelistUrl": "http://uchallenge.unipus.cn/"
     },
     {
       "id": "apmcm",
@@ -2342,7 +2440,9 @@
       "noticesSource": "https://www.mcm.edu.cn/",
       "noticesFetchedAt": "2026-09-21",
       "lastChecked": "2026-09-21",
-      "lastCheckStatus": "ok"
+      "lastCheckStatus": "ok",
+      "whitelistNo": 5,
+      "whitelistUrl": "http://www.mcm.edu.cn/"
     },
     {
       "id": "robomaster",
@@ -2469,7 +2569,2318 @@
       "noticesSource": "https://www.robomaster.com/zh-CN/resource/announcement",
       "noticesFetchedAt": "2026-09-21",
       "lastChecked": "2026-09-21",
-      "lastCheckStatus": "ok"
+      "lastCheckStatus": "ok",
+      "whitelistNo": 19,
+      "whitelistUrl": "https://www.robomaster.com/zh-CN"
+    },
+    {
+      "id": "wl-03",
+      "name": "“挑战杯”中国大学生创业计划大赛",
+      "shortName": "挑战杯”中国大学生创业计划大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.chuangqingchun.net/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "创新创业",
+        "综合类"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "“挑战杯”中国大学生创业计划大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 3,
+      "whitelistUrl": "http://www.chuangqingchun.net/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-06",
+      "name": "全国大学生电子设计竞赛",
+      "shortName": "全国大学生电子设计竞赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.nuedcchina.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "电子设计",
+        "硬件"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生电子设计竞赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 6,
+      "whitelistUrl": "http://www.nuedcchina.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-07",
+      "name": "中国大学生医学技术技能大赛",
+      "shortName": "中国大学生医学技术技能大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://medu.bjmu.edu.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "医学",
+        "临床技能"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "中国大学生医学技术技能大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 7,
+      "whitelistUrl": "https://medu.bjmu.edu.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-08",
+      "name": "全国大学生机械创新设计大赛",
+      "shortName": "全国大学生机械创新设计大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://11umic.hust.edu.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "机械",
+        "创新设计"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生机械创新设计大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 8,
+      "whitelistUrl": "http://11umic.hust.edu.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-09",
+      "name": "全国大学生结构设计竞赛",
+      "shortName": "全国大学生结构设计竞赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.structurecontest.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "土木",
+        "结构设计"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生结构设计竞赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 9,
+      "whitelistUrl": "http://www.structurecontest.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-10",
+      "name": "全国大学生广告艺术大赛",
+      "shortName": "全国大学生广告艺术大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.sun-ada.net/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "广告",
+        "艺术设计"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生广告艺术大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 10,
+      "whitelistUrl": "http://www.sun-ada.net/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-11",
+      "name": "全国大学生智能汽车竞赛",
+      "shortName": "全国大学生智能汽车竞赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://www.smartcarrace.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "智能汽车",
+        "自动化"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生智能汽车竞赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 11,
+      "whitelistUrl": "https://www.smartcarrace.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-12",
+      "name": "全国大学生电子商务“创新、创意及创业”挑战赛",
+      "shortName": "全国大学生电子商务“创新、创意及创业",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.3chuang.net/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "电子商务",
+        "创新创业"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生电子商务“创新、创意及创业”挑战赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 12,
+      "whitelistUrl": "http://www.3chuang.net/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-13",
+      "name": "中国大学生工程实践与创新能力大赛",
+      "shortName": "中国大学生工程实践与创新能力大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.gcxl.edu.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "工程训练",
+        "工程实践"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "中国大学生工程实践与创新能力大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 13,
+      "whitelistUrl": "http://www.gcxl.edu.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-14",
+      "name": "全国大学生物流设计大赛",
+      "shortName": "全国大学生物流设计大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.clpp.org.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "物流",
+        "供应链"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生物流设计大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 14,
+      "whitelistUrl": "http://www.clpp.org.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-16",
+      "name": "两岸新锐设计竞赛·华灿奖",
+      "shortName": "两岸新锐设计竞赛·华灿奖",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.huacanjiang.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "设计",
+        "两岸交流"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "两岸新锐设计竞赛·华灿奖，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 16,
+      "whitelistUrl": "http://www.huacanjiang.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-17",
+      "name": "全国大学生创新创业训练计划年会展示",
+      "shortName": "全国大学生创新创业训练计划年会展示",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://gjcxcy.bjtu.edu.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "创新创业",
+        "训练计划"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生创新创业训练计划年会展示，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 17,
+      "whitelistUrl": "http://gjcxcy.bjtu.edu.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-18",
+      "name": "全国大学生化工设计竞赛",
+      "shortName": "全国大学生化工设计竞赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://iche.zju.edu.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "化学工程",
+        "工艺设计"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生化工设计竞赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 18,
+      "whitelistUrl": "http://iche.zju.edu.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "china-cssc",
+      "name": "全国大学生市场调查与分析大赛",
+      "shortName": "市场调查与分析大赛",
+      "organizer": "中国商业统计学会",
+      "officialUrl": "http://www.china-cssc.org/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "统计",
+        "市场调查",
+        "数据分析"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单",
+        "统计类"
+      ],
+      "targetAudience": "全国高校在校本科生、研究生",
+      "content": "由中国商业统计学会主办，分知识赛（个人笔试）与实践赛（团队调研报告）两阶段，逐级为校赛—省赛—全国总决赛。调研选题覆盖消费、民生、市场等方向，需完成问卷设计、数据采集与建模分析。",
+      "knowledge": [
+        "统计学基础与抽样方法",
+        "问卷设计与信效度检验",
+        "SPSS / Python 数据分析",
+        "调研报告写作与可视化",
+        "团队协作与现场答辩"
+      ],
+      "preparation": [
+        "知识赛按官方题库系统复习统计基础",
+        "实践赛尽早确定选题并完成预调研",
+        "样本量要满足分析要求，注意抽样代表性",
+        "报告按官方模板撰写，附数据与代码以备复核"
+      ],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 20,
+      "whitelistUrl": "http://www.china-cssc.org/",
+      "notices": [
+        {
+          "title": "关于第四届全国高校青年教师数据科学与商业分析 案例教学竞赛延期报名的通知",
+          "url": "http://www.china-cssc.org/show-15-2071-1.html",
+          "date": "2026-04-23",
+          "excerpt": "关于第四届全国高校青年教师数据科学与商业分析 案例教学竞赛延期报名的通知",
+          "tags": [
+            "报名"
+          ],
+          "sourcePage": "http://www.china-cssc.org/"
+        },
+        {
+          "title": "关于举办“统计调查骨干教师实践教学研讨会暨 第十七届市场调查与分析大赛指导教师培训会”的通知",
+          "url": "http://www.china-cssc.org/show-16-2182-1.html",
+          "date": "2026-09-21",
+          "excerpt": "关于举办“统计调查骨干教师实践教学研讨会暨 第十七届市场调查与分析大赛指导教师培训会”的通知",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "http://www.china-cssc.org/"
+        },
+        {
+          "title": "第14届全国大学生市调大赛第三期指导教师培训会在池州成功举办",
+          "url": "http://www.china-cssc.org/show-16-1347-1.html",
+          "date": "2024-03-28",
+          "excerpt": "第14届全国大学生市调大赛第三期指导教师培训会在池州成功举办",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "http://www.china-cssc.org/"
+        },
+        {
+          "title": "关于发布《12345政务服务便民热线数据质量评价规范》《12345政务服务便民热线数据资产评估指南》团体标准的通知",
+          "url": "http://www.china-cssc.org/show-18-1738-1.html",
+          "date": "2024-12-02",
+          "excerpt": "关于发布《12345政务服务便民热线数据质量评价规范》《12345政务服务便民热线数据资产评估指南》团体标准的通知",
+          "tags": [
+            "规则"
+          ],
+          "sourcePage": "http://www.china-cssc.org/"
+        },
+        {
+          "title": "关于中国商业统计学会2026年度论文征集活动评审结果的公告",
+          "url": "http://www.china-cssc.org/show-11-2139-1.html",
+          "date": "2026-07-16",
+          "excerpt": "关于中国商业统计学会2026年度论文征集活动评审结果的公告",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "http://www.china-cssc.org/"
+        },
+        {
+          "title": "关于公布中国商业统计学会2024年度规划课题立项名单的通知",
+          "url": "http://www.china-cssc.org/show-18-1767-1.html",
+          "date": "2024-12-13",
+          "excerpt": "关于公布中国商业统计学会2024年度规划课题立项名单的通知",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "http://www.china-cssc.org/"
+        },
+        {
+          "title": "中国商业统计学会2024年度规划课题拟立项名单公示",
+          "url": "http://www.china-cssc.org/show-18-1754-1.html",
+          "date": "2024-12-09",
+          "excerpt": "中国商业统计学会2024年度规划课题拟立项名单公示",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "http://www.china-cssc.org/"
+        },
+        {
+          "title": "关于朱淑芳同志任职学会副秘书长的通知",
+          "url": "http://www.china-cssc.org/show-11-2180-1.html",
+          "date": "2026-09-21",
+          "excerpt": "关于朱淑芳同志任职学会副秘书长的通知",
+          "tags": [],
+          "sourcePage": "http://www.china-cssc.org/"
+        }
+      ],
+      "noticesSource": "http://www.china-cssc.org/",
+      "noticesFetchedAt": "2026-09-21"
+    },
+    {
+      "id": "wl-21",
+      "name": "全国大学生先进成图技术与产品信息建模创新大赛",
+      "shortName": "全国大学生先进成图技术与产品信息建模",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.chengtudasai.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "工程制图",
+        "产品建模"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生先进成图技术与产品信息建模创新大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 21,
+      "whitelistUrl": "http://www.chengtudasai.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-22",
+      "name": "全国三维数字化创新设计大赛",
+      "shortName": "全国三维数字化创新设计大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://3dds.3ddl.net/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "三维设计",
+        "数字化"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国三维数字化创新设计大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 22,
+      "whitelistUrl": "https://3dds.3ddl.net/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-23",
+      "name": "“西门子杯”中国智能制造挑战赛",
+      "shortName": "西门子杯”中国智能制造挑战赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.siemenscup-cimc.org.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "智能制造",
+        "自动化"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "“西门子杯”中国智能制造挑战赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 23,
+      "whitelistUrl": "http://www.siemenscup-cimc.org.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-26",
+      "name": "中国高校计算机大赛",
+      "shortName": "中国高校计算机大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.c4best.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "计算机",
+        "多赛道"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "中国高校计算机大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 26,
+      "whitelistUrl": "http://www.c4best.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-27",
+      "name": "蓝桥杯全国软件和信息技术专业人才大赛",
+      "shortName": "蓝桥杯全国软件和信息技术专业人才大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://dasai.lanqiao.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "程序设计",
+        "软件"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "蓝桥杯全国软件和信息技术专业人才大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 27,
+      "whitelistUrl": "http://dasai.lanqiao.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-28",
+      "name": "米兰设计周——中国高校设计学科师生优秀作品展",
+      "shortName": "米兰设计周——中国高校设计学科师生优",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.dandad.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "设计",
+        "艺术"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "米兰设计周——中国高校设计学科师生优秀作品展，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 28,
+      "whitelistUrl": "http://www.dandad.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-29",
+      "name": "全国大学生地质技能竞赛",
+      "shortName": "全国大学生地质技能竞赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://yuanxi.cugb.edu.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "地质",
+        "资源勘探"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生地质技能竞赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 29,
+      "whitelistUrl": "https://yuanxi.cugb.edu.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-30",
+      "name": "全国大学生光电设计竞赛",
+      "shortName": "全国大学生光电设计竞赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://gd.p.moocollege.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "光电",
+        "光学工程"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生光电设计竞赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 30,
+      "whitelistUrl": "http://gd.p.moocollege.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "ciciec",
+      "name": "全国大学生集成电路创新创业大赛",
+      "shortName": "集创赛",
+      "organizer": "工业和信息化部人才交流中心",
+      "officialUrl": "https://univ.ciciec.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "集成电路",
+        "芯片设计",
+        "创新创业"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单",
+        "企业命题"
+      ],
+      "targetAudience": "全国高校集成电路及相关专业在校学生",
+      "content": "由工信部人才交流中心主办，设芯片设计、芯片应用、芯创成果等多个赛项，企业出题、真实工艺与工具链，分初赛与全国总决赛，是国内集成电路领域规模最大的学科竞赛。",
+      "knowledge": [
+        "数字 / 模拟集成电路设计",
+        "Verilog / VHDL 与 EDA 工具（Cadence、Synopsys）",
+        "FPGA 开发与验证",
+        "半导体工艺与版图基础",
+        "嵌入式系统与传感器应用"
+      ],
+      "preparation": [
+        "尽早确定赛项与选题，企业命题需研读赛题文档",
+        "熟练掌握至少一套 EDA 流程，预留流片/验证时间",
+        "重视功能验证与测试报告",
+        "关注官方钉钉/公众号发布的时间节点"
+      ],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 31,
+      "whitelistUrl": "https://univ.ciciec.com/",
+      "notices": [
+        {
+          "title": "置顶 【重要通知，参赛必看】第十届集创赛全国总决赛比赛要求及说明",
+          "url": "https://univ.ciciec.com/nr.jsp?g=2",
+          "date": "2026-07-31",
+          "excerpt": "置顶 【重要通知，参赛必看】第十届集创赛全国总决赛比赛要求及说明",
+          "tags": [
+            "赛程",
+            "规则"
+          ],
+          "sourcePage": "https://univ.ciciec.com/",
+          "keyDates": {
+            "eventDate": "公示期结束后的3-5个工作日内处理复议并邮件反馈处理意见，复议流程及相关... 重要通知 【获奖名单】第十届集创赛全国总决赛（芯片设计与产业链赛项）获奖名单公示"
+          }
+        },
+        {
+          "title": "置顶 【重要通知】第十届集创赛全国总决赛比赛通知",
+          "url": "https://univ.ciciec.com/nr.jsp?g=2",
+          "date": "2026-07-30",
+          "excerpt": "置顶 【重要通知】第十届集创赛全国总决赛比赛通知",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://univ.ciciec.com/",
+          "keyDates": {
+            "eventDate": "公示期结束后的3-5个工作日内处理复议并邮件反馈处理意见，复议流程及相关... 重要通知 【获奖名单】第十届集创赛全国总决赛（芯片设计与产业链赛项）获奖名单公示"
+          }
+        },
+        {
+          "title": "置顶 【获奖名单】第十届集创赛全国总决赛（芯片应用和芯创成果赛项）获奖名单公示",
+          "url": "https://univ.ciciec.com/col.jsp?id=111",
+          "date": "2026-08-25",
+          "excerpt": "置顶 【获奖名单】第十届集创赛全国总决赛（芯片应用和芯创成果赛项）获奖名单公示",
+          "tags": [
+            "赛程",
+            "结果"
+          ],
+          "sourcePage": "https://univ.ciciec.com/"
+        },
+        {
+          "title": "置顶 【获奖名单】第十届集创赛全国总决赛（芯片设计与产业链赛项）获奖名单公示",
+          "url": "https://univ.ciciec.com/nr.jsp?g=2",
+          "date": "2026-08-21",
+          "excerpt": "置顶 【获奖名单】第十届集创赛全国总决赛（芯片设计与产业链赛项）获奖名单公示",
+          "tags": [
+            "赛程",
+            "结果"
+          ],
+          "sourcePage": "https://univ.ciciec.com/",
+          "keyDates": {
+            "eventDate": "公示期结束后的3-5个工作日内处理复议并邮件反馈处理意见，复议流程及相关... 重要通知 【获奖名单】第十届集创赛全国总决赛（芯片设计与产业链赛项）获奖名单公示"
+          }
+        },
+        {
+          "title": "置顶 关于推荐集创赛评审专家的通知",
+          "url": "https://univ.ciciec.com/nr.jsp?g=2",
+          "date": "2026-04-29",
+          "excerpt": "置顶 关于推荐集创赛评审专家的通知",
+          "tags": [],
+          "sourcePage": "https://univ.ciciec.com/"
+        },
+        {
+          "title": "《集成电路与嵌入式系统》期刊支持第十届集创赛，共筑学术与实践桥梁",
+          "url": "https://univ.ciciec.com/nr.jsp?g=1",
+          "date": "2026-04-10",
+          "excerpt": "《集成电路与嵌入式系统》期刊支持第十届集创赛，共筑学术与实践桥梁",
+          "tags": [],
+          "sourcePage": "https://univ.ciciec.com/"
+        }
+      ],
+      "noticesSource": "https://univ.ciciec.com/",
+      "noticesFetchedAt": "2026-09-21",
+      "keyDates": {
+        "eventDate": "公示期结束后的3-5个工作日内处理复议并邮件反馈处理意见，复议流程及相关... 重要通知 【获奖名单】第十届集创赛全国总决赛（芯片设计与产业链赛项）获奖名单公示"
+      },
+      "keyDatesFrom": {
+        "title": "置顶 【重要通知，参赛必看】第十届集创赛全国总决赛比赛要求及说明",
+        "url": "https://univ.ciciec.com/nr.jsp?g=2"
+      }
+    },
+    {
+      "id": "wl-32",
+      "name": "全国大学生金相技能大赛",
+      "shortName": "全国大学生金相技能大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://www.jxds.tech/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "材料",
+        "金相技能"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生金相技能大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 32,
+      "whitelistUrl": "https://www.jxds.tech/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-34",
+      "name": "未来设计师·全国高校数字艺术设计大赛",
+      "shortName": "未来设计师·全国高校数字艺术设计大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://www.ncda.org.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "数字艺术",
+        "设计"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "未来设计师·全国高校数字艺术设计大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 34,
+      "whitelistUrl": "https://www.ncda.org.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-35",
+      "name": "全国周培源大学生力学竞赛",
+      "shortName": "全国周培源大学生力学竞赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://zpy.cstam.org.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "力学",
+        "基础学科"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国周培源大学生力学竞赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 35,
+      "whitelistUrl": "http://zpy.cstam.org.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-36",
+      "name": "中国大学生机械工程创新创意大赛",
+      "shortName": "中国大学生机械工程创新创意大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.gczbds.org/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "机械工程",
+        "创新创意"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "中国大学生机械工程创新创意大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 36,
+      "whitelistUrl": "http://www.gczbds.org/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-37",
+      "name": "中国机器人大赛暨 RoboCup 机器人世界杯中国赛",
+      "shortName": "中国机器人大赛暨 RoboCup 机",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://crc.drct-caa.org.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "机器人",
+        "人工智能"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "中国机器人大赛暨 RoboCup 机器人世界杯中国赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 37,
+      "whitelistUrl": "http://crc.drct-caa.org.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-39",
+      "name": "中美青年创客大赛",
+      "shortName": "中美青年创客大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://www.eol.cn/html/lx/maker/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "创客",
+        "创新创业"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "中美青年创客大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 39,
+      "whitelistUrl": "https://www.eol.cn/html/lx/maker/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-40",
+      "name": "睿抗机器人开发者大赛（RAICOM）",
+      "shortName": "睿抗机器人开发者大赛（RAICOM）",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://www.robocom.com.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "机器人",
+        "开发者"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "睿抗机器人开发者大赛（RAICOM），列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 40,
+      "whitelistUrl": "https://www.robocom.com.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-41",
+      "name": "“大唐杯”全国大学生新一代信息通信技术大赛",
+      "shortName": "大唐杯”全国大学生新一代信息通信技术",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://dtcup.dtxiaotangren.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "通信技术",
+        "信息通信"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "“大唐杯”全国大学生新一代信息通信技术大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 41,
+      "whitelistUrl": "https://dtcup.dtxiaotangren.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-43",
+      "name": "全国大学生嵌入式芯片与系统设计竞赛",
+      "shortName": "全国大学生嵌入式芯片与系统设计竞赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.socchina.net/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "嵌入式",
+        "芯片系统"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生嵌入式芯片与系统设计竞赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 43,
+      "whitelistUrl": "http://www.socchina.net/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-44",
+      "name": "全国大学生生命科学竞赛（CULSC）",
+      "shortName": "全国大学生生命科学竞赛（CULSC）",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://www.culsc.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "生命科学",
+        "生物"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生生命科学竞赛（CULSC），列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 44,
+      "whitelistUrl": "https://www.culsc.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-45",
+      "name": "全国大学生物理实验竞赛",
+      "shortName": "全国大学生物理实验竞赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://wlsycx.moocollege.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "物理实验",
+        "基础学科"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生物理实验竞赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 45,
+      "whitelistUrl": "http://wlsycx.moocollege.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-46",
+      "name": "全国高校 BIM 毕业设计创新大赛",
+      "shortName": "全国高校 BIM 毕业设计创新大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://gxbsxs.glodonedu.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "建筑",
+        "BIM"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国高校 BIM 毕业设计创新大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 46,
+      "whitelistUrl": "https://gxbsxs.glodonedu.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-47",
+      "name": "全国高校商业精英挑战赛",
+      "shortName": "全国高校商业精英挑战赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://cubec.org.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "商业",
+        "经营管理"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国高校商业精英挑战赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 47,
+      "whitelistUrl": "http://cubec.org.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-48",
+      "name": "“学创杯”全国大学生创业综合模拟大赛",
+      "shortName": "学创杯”全国大学生创业综合模拟大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.bster.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "创业模拟",
+        "经营管理"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "“学创杯”全国大学生创业综合模拟大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 48,
+      "whitelistUrl": "http://www.bster.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-49",
+      "name": "中国高校智能机器人创意大赛",
+      "shortName": "中国高校智能机器人创意大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.robotcontest.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "智能机器人",
+        "创意"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "中国高校智能机器人创意大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 49,
+      "whitelistUrl": "http://www.robotcontest.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-50",
+      "name": "中国好创意暨全国数字艺术设计大赛",
+      "shortName": "中国好创意暨全国数字艺术设计大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://www.cdec.org.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "数字艺术",
+        "创意设计"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "中国好创意暨全国数字艺术设计大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 50,
+      "whitelistUrl": "https://www.cdec.org.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-51",
+      "name": "中国机器人及人工智能大赛",
+      "shortName": "中国机器人及人工智能大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.caairobot.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "机器人",
+        "人工智能"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "中国机器人及人工智能大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 51,
+      "whitelistUrl": "http://www.caairobot.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "jienengjianpai",
+      "name": "全国大学生节能减排社会实践与科技竞赛",
+      "shortName": "节能减排竞赛",
+      "organizer": "教育部高等学校能源动力类专业教学指导委员会",
+      "officialUrl": "https://www.jienengjianpai.org/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "节能减排",
+        "能源环境",
+        "科技创新"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单",
+        "双赛道"
+      ],
+      "targetAudience": "全国高校在校本科生、研究生",
+      "content": "设科技作品类与社会实践类两个赛道：科技作品类提交实物或软件作品，社会实践类提交调研报告。选题紧扣节能减排、双碳目标，逐级为校赛—省赛—全国决赛。",
+      "knowledge": [
+        "能源动力与节能技术基础",
+        "机械 / 电气设计（作品类）",
+        "社会调查与政策分析（实践类）",
+        "数据测算与减排量核算",
+        "作品说明书与展板制作"
+      ],
+      "preparation": [
+        "作品类要做出实物或可运行原型，不要只有方案",
+        "实践类需扎实的一手调研数据与政策依据",
+        "量化节能效果，给出对比基准",
+        "决赛需准备现场演示与答辩"
+      ],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 52,
+      "whitelistUrl": "https://www.jienengjianpai.org/",
+      "notices": [
+        {
+          "title": "“大工能动杯”第十九届全国大学生节能减排大赛总决赛即将开幕！@全市中小学生，大工邀你来当“小评审”！",
+          "url": "https://www.jienengjianpai.org/",
+          "date": "2026-07-26",
+          "excerpt": "“大工能动杯”第十九届全国大学生节能减排大赛总决赛即将开幕！@全市中小学生，大工邀你来当“小评审”！",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://www.jienengjianpai.org/"
+        },
+        {
+          "title": "【荔枝网】科技×双碳 300支队伍逐鹿全国大学生节能减排社会实践与科技竞赛决赛",
+          "url": "https://www.jienengjianpai.org/",
+          "date": "2023-08-03",
+          "excerpt": "【荔枝网】科技×双碳 300支队伍逐鹿全国大学生节能减排社会实践与科技竞赛决赛",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://www.jienengjianpai.org/"
+        },
+        {
+          "title": "【江苏新闻广播】第十六届全国大学生节能减排社会实践与科技竞赛决赛在东南大学开幕",
+          "url": "https://www.jienengjianpai.org/",
+          "date": "2023-08-03",
+          "excerpt": "【江苏新闻广播】第十六届全国大学生节能减排社会实践与科技竞赛决赛在东南大学开幕",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "https://www.jienengjianpai.org/"
+        },
+        {
+          "title": "关于发放“大工能动杯”第十九届全国大学生节能减排社会实践与科技竞赛获奖证书的通知",
+          "url": "https://www.jienengjianpai.org/",
+          "date": "2026-08-17",
+          "excerpt": "关于发放“大工能动杯”第十九届全国大学生节能减排社会实践与科技竞赛获奖证书的通知",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "https://www.jienengjianpai.org/"
+        },
+        {
+          "title": "关于公布“沈鼓杯”第十九届全国大学生节能减排社会实践与科技竞赛产业赛道获奖名单的通知",
+          "url": "https://www.jienengjianpai.org/",
+          "date": "2026-08-06",
+          "excerpt": "关于公布“沈鼓杯”第十九届全国大学生节能减排社会实践与科技竞赛产业赛道获奖名单的通知",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "https://www.jienengjianpai.org/"
+        },
+        {
+          "title": "关于公布“大工能动杯”第十九届全国大学生节能减排社会实践与科技竞赛获奖名单的通知",
+          "url": "https://www.jienengjianpai.org/",
+          "date": "2026-08-06",
+          "excerpt": "关于公布“大工能动杯”第十九届全国大学生节能减排社会实践与科技竞赛获奖名单的通知",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "https://www.jienengjianpai.org/"
+        },
+        {
+          "title": "Notice on the Results of the Hong Kong, Macao, Taiwan and International Track of the 19th National College Student Competition on Energy Conservation, Emission Reduction & Social Practice",
+          "url": "https://www.jienengjianpai.org/",
+          "date": "2026-08-07",
+          "excerpt": "Notice on the Results of the Hong Kong, Macao, Taiwan and International Track of the 19th National College Student Competition on…",
+          "tags": [],
+          "sourcePage": "https://www.jienengjianpai.org/"
+        },
+        {
+          "title": "Notice on the Finals of the 19th National College Students Energy Conservation, Emission Reduction and Social Practice & Technology Competition, Hong Kong, Macao, Taiwan and \"Belt and Road\" International Track",
+          "url": "https://www.jienengjianpai.org/",
+          "date": "2026-07-06",
+          "excerpt": "Notice on the Finals of the 19th National College Students Energy Conservation, Emission Reduction and Social Practice & Technolo…",
+          "tags": [],
+          "sourcePage": "https://www.jienengjianpai.org/"
+        }
+      ],
+      "noticesSource": "https://www.jienengjianpai.org/",
+      "noticesFetchedAt": "2026-09-21"
+    },
+    {
+      "id": "wl-53",
+      "name": "“21世纪杯”全国英语演讲比赛",
+      "shortName": "21世纪杯”全国英语演讲比赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://contest.i21st.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "英语",
+        "演讲"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "“21世纪杯”全国英语演讲比赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 53,
+      "whitelistUrl": "https://contest.i21st.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-54",
+      "name": "iCAN 大学生创新创业大赛",
+      "shortName": "iCAN 大学生创新创业大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.g-ican.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "创新创业",
+        "传感器"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "iCAN 大学生创新创业大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 54,
+      "whitelistUrl": "http://www.g-ican.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-55",
+      "name": "“工行杯”全国大学生金融科技创新大赛",
+      "shortName": "工行杯”全国大学生金融科技创新大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://www.gonghangbei.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "金融科技",
+        "银行"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "“工行杯”全国大学生金融科技创新大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 55,
+      "whitelistUrl": "https://www.gonghangbei.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-56",
+      "name": "中华经典诵写讲大赛",
+      "shortName": "中华经典诵写讲大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://jdsxj.eduyun.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "中华经典",
+        "语言文化"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "中华经典诵写讲大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 56,
+      "whitelistUrl": "https://jdsxj.eduyun.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-57",
+      "name": "“外教社杯”全国高校学生跨文化能力大赛",
+      "shortName": "外教社杯”全国高校学生跨文化能力大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://ict.sflep.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "跨文化",
+        "外语能力"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "“外教社杯”全国高校学生跨文化能力大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 57,
+      "whitelistUrl": "https://ict.sflep.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-59",
+      "name": "全国大学生工业设计大赛",
+      "shortName": "全国大学生工业设计大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://www.cuidc.net/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "工业设计",
+        "产品设计"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生工业设计大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 59,
+      "whitelistUrl": "https://www.cuidc.net/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-60",
+      "name": "全国大学生水利创新设计大赛",
+      "shortName": "全国大学生水利创新设计大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://sljzw.hhu.edu.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "水利",
+        "土木"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生水利创新设计大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 60,
+      "whitelistUrl": "https://sljzw.hhu.edu.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "cteic",
+      "name": "全国大学生化工实验大赛",
+      "shortName": "化工实验大赛",
+      "organizer": "中国化工教育协会",
+      "officialUrl": "http://www.cteic.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "化学工程",
+        "实验技能"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单",
+        "实验类"
+      ],
+      "targetAudience": "全国高校化工类及相关专业在校本科生",
+      "content": "面向化工类专业本科生的实验技能竞赛，含化工原理实验、化工仿真与虚拟仿真操作等环节，按校赛—省赛—全国赛逐级选拔，重点考查实验操作规范与理论应用能力。",
+      "knowledge": [
+        "化工原理（流体、传热、传质）",
+        "化工实验装置操作与安全规范",
+        "化工仿真软件操作",
+        "数据处理与误差分析",
+        "实验报告撰写"
+      ],
+      "preparation": [
+        "按官方考纲复习化工原理核心计算",
+        "反复练习实验装置开停车与异常处理",
+        "熟悉仿真软件界面与常见工况",
+        "注意实验安全规范，操作细节是扣分点"
+      ],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 61,
+      "whitelistUrl": "http://www.cteic.com/",
+      "notices": [
+        {
+          "title": "石油和化工行业“十四五”规划教材阶段性验收（第三批）结果公示通知",
+          "url": "http://www.cteic.com/associationShow-4682.html",
+          "date": "2026-08-17",
+          "excerpt": "石油和化工行业“十四五”规划教材阶段性验收（第三批）结果公示通知",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "http://www.cteic.com/"
+        },
+        {
+          "title": "关于公布第十四届全国石油和化工行业职业院校技能大赛化学实验技术赛项比赛结果的通知",
+          "url": "http://www.cteic.com/associationShow-4681.html",
+          "date": "2026-07-28",
+          "excerpt": "关于公布第十四届全国石油和化工行业职业院校技能大赛化学实验技术赛项比赛结果的通知",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "http://www.cteic.com/"
+        },
+        {
+          "title": "关于公布第三届全国职业院校石油和化工类 专业教师教学能力大赛比赛结果的通知",
+          "url": "http://www.cteic.com/associationShow-4678.html",
+          "date": "2026-07-22",
+          "excerpt": "关于公布第三届全国职业院校石油和化工类 专业教师教学能力大赛比赛结果的通知",
+          "tags": [
+            "结果"
+          ],
+          "sourcePage": "http://www.cteic.com/"
+        },
+        {
+          "title": "关于公布第三届全国职业院校石油和化工类专业教师教学能力大赛入围决赛作品名单的通知",
+          "url": "http://www.cteic.com/associationShow-4673.html",
+          "date": "2026-07-07",
+          "excerpt": "关于公布第三届全国职业院校石油和化工类专业教师教学能力大赛入围决赛作品名单的通知",
+          "tags": [
+            "赛程",
+            "结果"
+          ],
+          "sourcePage": "http://www.cteic.com/",
+          "keyDates": {
+            "eventDate": "2026-07-14"
+          }
+        },
+        {
+          "title": "关于召开2026 年全国石油和化工企业管理创新大会的通知",
+          "url": "http://www.cteic.com/associationShow-4688.html",
+          "date": "2026-09-20",
+          "excerpt": "关于召开2026 年全国石油和化工企业管理创新大会的通知",
+          "tags": [],
+          "sourcePage": "http://www.cteic.com/"
+        },
+        {
+          "title": "“智汇‘氟’才 创领清流” 2026氟新材料产业创新创业大赛公告",
+          "url": "http://www.cteic.com/associationShow-4674.html",
+          "date": "2026-07-08",
+          "excerpt": "“智汇‘氟’才 创领清流” 2026氟新材料产业创新创业大赛公告",
+          "tags": [],
+          "sourcePage": "http://www.cteic.com/"
+        },
+        {
+          "title": "关于召开2026年石油和化工职业教育高质量发展大会暨全国石油和化工职业教育教学指导委员会工作会议的通知…",
+          "url": "http://www.cteic.com/associationShow-4670.html",
+          "date": "2026-06-26",
+          "excerpt": "关于召开2026年石油和化工职业教育高质量发展大会暨全国石油和化工职业教育教学指导委员会工作会议的通知…",
+          "tags": [],
+          "sourcePage": "http://www.cteic.com/"
+        }
+      ],
+      "noticesSource": "http://www.cteic.com/",
+      "noticesFetchedAt": "2026-09-21",
+      "keyDates": {
+        "eventDate": "2026-07-14"
+      },
+      "keyDatesFrom": {
+        "title": "关于公布第三届全国职业院校石油和化工类专业教师教学能力大赛入围决赛作品名单的通知",
+        "url": "http://www.cteic.com/associationShow-4673.html"
+      }
+    },
+    {
+      "id": "wl-62",
+      "name": "全国大学生化学实验创新设计大赛",
+      "shortName": "全国大学生化学实验创新设计大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://cid.nju.edu.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "化学",
+        "实验创新"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生化学实验创新设计大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 62,
+      "whitelistUrl": "https://cid.nju.edu.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-64",
+      "name": "全国大学生花园设计建造竞赛",
+      "shortName": "全国大学生花园设计建造竞赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://www.chsla.org.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "园林",
+        "景观设计"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生花园设计建造竞赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 64,
+      "whitelistUrl": "https://www.chsla.org.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-67",
+      "name": "全国大学生测绘学科创新创业智能大赛",
+      "shortName": "全国大学生测绘学科创新创业智能大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://smt.whu.edu.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "测绘",
+        "地理信息"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生测绘学科创新创业智能大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 67,
+      "whitelistUrl": "http://smt.whu.edu.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-68",
+      "name": "全国大学生统计建模大赛",
+      "shortName": "全国大学生统计建模大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://tjjmds.ai-learning.net/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "统计建模",
+        "数据分析"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生统计建模大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 68,
+      "whitelistUrl": "http://tjjmds.ai-learning.net/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-69",
+      "name": "全国大学生能源经济学术创意大赛",
+      "shortName": "全国大学生能源经济学术创意大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://energy.qibebt.ac.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "能源经济",
+        "学术创意"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生能源经济学术创意大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 69,
+      "whitelistUrl": "http://energy.qibebt.ac.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-70",
+      "name": "全国大学生基础医学创新研究暨实验设计论坛",
+      "shortName": "全国大学生基础医学创新研究暨实验设计",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.jcyxds.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "基础医学",
+        "实验设计"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生基础医学创新研究暨实验设计论坛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 70,
+      "whitelistUrl": "http://www.jcyxds.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "mit-caai",
+      "name": "全国大学生数字媒体科技作品及创意竞赛",
+      "shortName": "数媒竞赛",
+      "organizer": "中国人工智能学会",
+      "officialUrl": "http://www.cmit.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "数字媒体",
+        "创意设计",
+        "人工智能应用"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单",
+        "作品赛"
+      ],
+      "targetAudience": "全国高校在校学生（分本科生组、研究生组）",
+      "content": "由中国人工智能学会主办，围绕数字媒体技术与创意作品，设虚拟现实、数字影像、交互设计、人工智能生成内容等方向，提交作品经初评进入全国总决赛现场评审。",
+      "knowledge": [
+        "数字媒体制作（三维建模、动效、剪辑）",
+        "交互设计与用户体验",
+        "VR / AR 开发（Unity / Unreal）",
+        "AI 生成内容工具链",
+        "作品创意阐述与演示"
+      ],
+      "preparation": [
+        "按赛项要求确定作品形态，注意时长与格式限制",
+        "突出创意点与技术实现难度的结合",
+        "准备演示视频与作品说明文档",
+        "关注官方赛程表（本站已抓取阶段与截止时间）"
+      ],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 71,
+      "whitelistUrl": "http://www.cmit.cn/",
+      "notices": [
+        {
+          "title": "第一阶段（截止2025.9.21）",
+          "url": "http://www.cmit.cn/",
+          "date": null,
+          "excerpt": "进行中 · 截止2025.9.21",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "http://www.cmit.cn/"
+        },
+        {
+          "title": "第二阶段（2025.9.22-9.26）",
+          "url": "http://www.cmit.cn/",
+          "date": null,
+          "excerpt": "2025.9.22-9.26",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "http://www.cmit.cn/"
+        },
+        {
+          "title": "第三阶段（2025.9.27-10.10）",
+          "url": "http://www.cmit.cn/",
+          "date": null,
+          "excerpt": "2025.9.27-10.10",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "http://www.cmit.cn/"
+        },
+        {
+          "title": "第四阶段（2025.10.11-10.13）",
+          "url": "http://www.cmit.cn/",
+          "date": null,
+          "excerpt": "2025.10.11-10.13",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "http://www.cmit.cn/"
+        },
+        {
+          "title": "第五阶段（2025.10.24-10.26）",
+          "url": "http://www.cmit.cn/",
+          "date": null,
+          "excerpt": "2025.10.24-10.26",
+          "tags": [
+            "赛程"
+          ],
+          "sourcePage": "http://www.cmit.cn/"
+        }
+      ],
+      "noticesSource": "http://mit-caai.cn/",
+      "noticesFetchedAt": "2026-09-21"
+    },
+    {
+      "id": "wl-72",
+      "name": "全国本科院校税收风险管控案例大赛",
+      "shortName": "全国本科院校税收风险管控案例大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://ssfkds.moocollege.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "税收",
+        "财会"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国本科院校税收风险管控案例大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 72,
+      "whitelistUrl": "http://ssfkds.moocollege.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-73",
+      "name": "全国企业模拟竞赛大赛",
+      "shortName": "全国企业模拟竞赛大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.ibizsim.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "企业模拟",
+        "经营管理"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国企业模拟竞赛大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 73,
+      "whitelistUrl": "http://www.ibizsim.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-74",
+      "name": "全国高等院校数智化企业经营沙盘大赛",
+      "shortName": "全国高等院校数智化企业经营沙盘大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://spbk.seentao.com/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "数智化经营",
+        "沙盘"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国高等院校数智化企业经营沙盘大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 74,
+      "whitelistUrl": "http://spbk.seentao.com/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-75",
+      "name": "全国数字建筑创新应用大赛",
+      "shortName": "全国数字建筑创新应用大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://bisai.ccen.com.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "建筑",
+        "数字化"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国数字建筑创新应用大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 75,
+      "whitelistUrl": "http://bisai.ccen.com.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-77",
+      "name": "国际大学生智能农业装备创新大赛",
+      "shortName": "国际大学生智能农业装备创新大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://uiaec.ujs.edu.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "农业装备",
+        "智能农机"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "国际大学生智能农业装备创新大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 77,
+      "whitelistUrl": "http://uiaec.ujs.edu.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-78",
+      "name": "“科云杯”全国大学生财会职业能力大赛",
+      "shortName": "科云杯”全国大学生财会职业能力大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://match.xmkeyun.com.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "财会",
+        "职业能力"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "“科云杯”全国大学生财会职业能力大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 78,
+      "whitelistUrl": "http://match.xmkeyun.com.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-79",
+      "name": "全国职业院校技能大赛",
+      "shortName": "全国职业院校技能大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "https://chinaskills.icve.com.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "职业技能",
+        "职业教育"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国职业院校技能大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 79,
+      "whitelistUrl": "https://chinaskills.icve.com.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-80",
+      "name": "全国大学生机器人大赛-RoboTac",
+      "shortName": "全国大学生机器人大赛-RoboTac",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://www.robotac.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "机器人",
+        "ROBOTAC"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "全国大学生机器人大赛-RoboTac，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 80,
+      "whitelistUrl": "http://www.robotac.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-81",
+      "name": "世界技能大赛",
+      "shortName": "世界技能大赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://worldskillschina.mohrss.gov.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "职业技能",
+        "世界技能"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "世界技能大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 81,
+      "whitelistUrl": "http://worldskillschina.mohrss.gov.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-82",
+      "name": "世界技能大赛中国选拔赛",
+      "shortName": "世界技能大赛中国选拔赛",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://worldskillschina.mohrss.gov.cn/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "职业技能",
+        "世界技能"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "世界技能大赛中国选拔赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 82,
+      "whitelistUrl": "http://worldskillschina.mohrss.gov.cn/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
+    },
+    {
+      "id": "wl-83",
+      "name": "一带一路暨金砖国家技能发展与技术创新大赛",
+      "shortName": "一带一路暨金砖国家技能发展与技术创新",
+      "organizer": "见官方报名网址",
+      "officialUrl": "http://inwsa.org/",
+      "officialUrlVerified": false,
+      "tier": "whitelist",
+      "tierLabel": "白名单",
+      "categories": [
+        "技能发展",
+        "国际赛"
+      ],
+      "tags": [
+        "教育部认可84项",
+        "白名单"
+      ],
+      "targetAudience": "全国高校在校学生、职业院校学生",
+      "content": "一带一路暨金砖国家技能发展与技术创新大赛，列入教育部认可的 84 项全国大学生学科竞赛名单（中国高等教育学会《全国普通高校大学生竞赛分析报告》竞赛清单）。具体赛制、赛项与时间以官方通知为准。",
+      "knowledge": [],
+      "preparation": [],
+      "sources": [
+        "moe-84"
+      ],
+      "whitelistNo": 83,
+      "whitelistUrl": "http://inwsa.org/",
+      "note": "本条由白名单批量补录：竞赛内容与备赛要点尚未人工整理，欢迎后续补充。"
     }
   ]
 }
